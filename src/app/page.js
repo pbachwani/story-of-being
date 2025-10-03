@@ -1,3 +1,9 @@
+import Hero from "@/sections/Hero";
+
 export default function Home() {
-  return <div>Blank slate </div>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }
