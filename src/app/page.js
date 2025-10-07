@@ -1,5 +1,6 @@
 import Awards from "@/sections/Awards";
 import Brands from "@/sections/Brands";
+import Contact from "@/sections/Contact";
 import Featured from "@/sections/Featured";
 import Hero from "@/sections/Hero";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Awards />
       <Featured />
       <Brands />
+      <Contact />
     </main>
   );
 }

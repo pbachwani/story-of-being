@@ -44,7 +44,7 @@ const Brands = () => {
   return (
     <section className="py-24 px-16 overflow-x-clip max-w-7xl mx-auto">
       <h2 className="font-abril text-4xl">Brands & associations</h2>
-      <div>
+      <div className="py-10">
         <Image src={line} alt="top line" className="mx-auto mt-2" />
 
         <div className="py-0 flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
@@ -64,7 +64,7 @@ const Brands = () => {
                     src={logo.image}
                     key={logo.name}
                     alt={logo.name}
-                    width={isMobile ? 50 : 100}
+                    width={60}
                   />
                 ))}
               </React.Fragment>
