@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f4f4f4;
   --foreground: #171717;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @theme inline {
@@ -15,15 +19,15 @@
   --font-abril: var(--font-abril);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: #171717;
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 }
