@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
 import line from "@/../public/brand-lines.png";
-import aavran from "@/../public/brands/aavran Logo.png";
+import aavran from "@/../public/brands/Aavran Logo.png";
 import ad from "@/../public/brands/architectural-digest.png";
 import earthwise from "@/../public/brands/Earthwise logo.png";
 import freedom from "@/../public/brands/Freedom Logo.png";
@@ -16,7 +16,7 @@ import krishna from "@/../public/brands/Krishna Logo.png";
 import Laffaire from "@/../public/brands/Laffaire Logo.png";
 import bodhi from "@/../public/brands/Bodhi.png";
 import butterfly from "@/../public/brands/logo-butterfly.png";
-import pangaia from "@/../public/brands/pangaia_Logo.png";
+import pangaia from "@/../public/brands/PANGAIA_Logo.png";
 import Pari from "@/../public/brands/Pari Logo.png";
 import Rahul from "@/../public/brands/Rahul Mishra.png";
 import Sarmaya from "@/../public/brands/Sarmaya-Logo.png";
