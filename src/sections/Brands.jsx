@@ -42,7 +42,7 @@ const Brands = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section className="py-24 px-16 overflow-x-clip max-w-7xl mx-auto">
+    <section className="pt-24 px-16 overflow-x-clip max-w-[1440px] mx-auto">
       <h2 className="font-abril text-4xl">Brands & associations</h2>
       <div className="py-10">
         <Image src={line} alt="top line" className="mx-auto mt-2" />
@@ -64,7 +64,7 @@ const Brands = () => {
                     src={logo.image}
                     key={logo.name}
                     alt={logo.name}
-                    width={60}
+                    height={60}
                   />
                 ))}
               </React.Fragment>

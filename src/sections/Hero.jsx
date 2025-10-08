@@ -13,7 +13,7 @@ const Hero = () => {
         muted
         playsInline
       ></video>
-      <div className="absolute top-0 left-0 w-screen h-screen bg-black/50 flex flex-col justify-center items-center text-white md:flex-row">
+      <div className="absolute top-0 left-0 w-screen h-screen bg-black/30 flex flex-col justify-center items-center text-white md:flex-row">
         <div className="h-full w-full flex-1 flex justify-center items-center max-md:items-end md:pl-20">
           <span>
             <img
