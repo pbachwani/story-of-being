@@ -2,7 +2,7 @@ import React from "react";
 
 const Featured = () => {
   return (
-    <section className="w-full h-full min-h-screen pt-20 px-16 max-w-[1440px] mx-auto">
+    <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 max-w-[1440px] mx-auto">
       <div className="flex flex-col gap-10">
         <h1 className="font-abril text-4xl">Featured Films</h1>
         {/* card 1 */}

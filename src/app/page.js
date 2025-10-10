@@ -7,11 +7,15 @@ import Hero from "@/sections/Hero";
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Awards />
-      <Featured />
-      <Brands />
-      <Contact />
+      <div className="">
+        <Hero />
+      </div>
+      <div className="z-10">
+        <Awards />
+        <Featured />
+        <Brands />
+        <Contact />
+      </div>
     </main>
   );
 }
