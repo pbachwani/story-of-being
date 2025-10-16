@@ -33,7 +33,7 @@ export const AnimatedLogo = () => {
   return (
     // <Link href="/">
     <div
-      className={`transition-all duration-500 ease-in-out z-30
+      className={`transition-all duration-500 ease-in-out
         ${
           scrolled
             ? "fixed top-2 left-16 w-16 h-auto z-50"

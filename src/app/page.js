@@ -7,10 +7,10 @@ import Hero from "@/sections/Hero";
 export default function Home() {
   return (
     <main>
-      <div className="">
+      <div className="sticky top-0 h-screen">
         <Hero />
       </div>
-      <div className="z-10">
+      <div className="relative z-10 bg-white">
         <Awards />
         <Featured />
         <Brands />

@@ -6,10 +6,10 @@ const Featured = () => {
       <div className="flex flex-col gap-10">
         <h1 className="font-abril text-4xl">Featured Films</h1>
         {/* card 1 */}
-        <div className="w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#587525] text-white">
+        <div className=" w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#587525]/30 text-white">
           {/* left */}
           <div className="md:col-span-8 col-span-12 h-full md:p-8 p-4">
-            <div className="p-0 h-full bg-gray-200 rounded-xl flex justify-center items-center text-black">
+            <div className="p-0 h-full bg-gray-200/80 rounded-xl flex justify-center items-center text-black">
               for featured image / video
             </div>
           </div>
