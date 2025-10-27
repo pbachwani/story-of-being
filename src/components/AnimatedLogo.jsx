@@ -46,7 +46,7 @@ export const AnimatedLogo = () => {
       {/* Logo Image Option */}
 
       <Image
-        src="/logo-green-nobg.png"
+        src="/logo-black-nobg.png"
         alt="story of being logo"
         className="w-full h-full object-contain z-50"
         // width={500}

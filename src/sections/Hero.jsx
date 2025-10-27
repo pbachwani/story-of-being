@@ -62,7 +62,7 @@ const Hero = () => {
     <section className="sticky top-0 -z-10 w-screen h-screen min-h-screen overflow-hidden">
       <video
         className="w-full h-screen object-cover"
-        src="/videos/clip1 - cropped.mp4"
+        src="/videos/clip2.mp4"
         type="video/mp4"
         autoPlay
         loop
@@ -70,13 +70,13 @@ const Hero = () => {
         playsInline
       ></video>
 
-      {/* Animated logo sits above everything */}
-
-      <div className="z-50">
+      {/* Animated logo placed above everything */}
+      {/* <div className="z-50">
         <AnimatedLogo />
-      </div>
+      </div> */}
 
-      <div className="absolute top-0 left-0 w-screen h-screen bg-black/10 flex flex-col justify-center items-center text-white md:flex-row">
+      {/* older layout */}
+      {/* <div className="absolute top-0 left-0 w-screen h-screen bg-black/10 flex flex-col justify-center items-center text-white md:flex-row">
         <div className="h-full w-full flex-1 flex flex-col justify-center items-end md:pr-20 max-md:justify-end max-md:items-center max-md:mb-20 gap-10 ">
           <Link href={"/films"}>
             <div className="bg-green-50/10 md:w-88 md:h-56 w-64 h-40 rounded-md shadow-2xl flex justify-center items-center hover:bg-green-50/40 hover:text-black transition-all duration-500 ease-out">
@@ -101,6 +101,35 @@ const Hero = () => {
               </div>
             </div>
           </Link>
+        </div>
+      </div> */}
+      <div className="absolute top-0 left-0 w-full h-full min-h-screen flex flex-col justify-center items-center text-white bg-black/20 max-md:flex-col">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl">
+          <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
+            <h1 className="text-5xl font-bold">Films</h1>
+            <p>A cinematic storytelling</p>
+          </div>
+          <div className="w-full flex flex-col justify-center items-center gap-4 max-md:p-10">
+            <img
+              src="/clean-white-logo.png"
+              alt="story of being logo"
+              className="max-md:max-w-40"
+            />
+            {/* <p className="font-bold">Two worlds - one journey</p> */}
+          </div>
+          <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
+            <h1 className="text-5xl font-bold">Telepathy</h1>
+            <p>Speak to your animals and plants</p>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
+        <div className="w-fit px-8">
+          <p className="text-nowrap">Two worlds</p>
+        </div>
+        <span className="border-b border-white/30 w-full" />
+        <div className="w-fit px-8">
+          <p className="text-nowrap">One journey</p>
         </div>
       </div>
     </section>

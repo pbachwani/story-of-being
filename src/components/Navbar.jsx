@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-screen h-20 flex justify-between items-center px-10 md:px-16 text-[##2A5312] text-lg font-semibold bg-white/20">
+    <nav className="fixed top-0 left-0 z-50 w-screen h-20 flex justify-between items-center px-10 md:px-16 text-[##2A5312] text-lg font-semibold bg-white/0">
       <Link
         href="/"
         className={`${
@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
       </Link>
 
-      <div className="gap-8 hidden md:flex">
+      <div className="gap-8 hidden md:flex text-white font-medium mix-blend-difference">
         <Link href={"/about"}>About</Link>
         <Link href={"/films"}>Films</Link>
         <Link href={"/telepathy"}>Telepathy</Link>
