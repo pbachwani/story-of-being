@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-screen h-20 flex justify-between items-center px-10 md:px-16 text-[##2A5312] text-lg font-semibold bg-white/0">
+    <nav className="fixed top-0 left-0 z-50 w-screen h-24 flex justify-between items-center px-10 md:px-16 text-[##2A5312] text-lg font-semibold">
       <Link
         href="/"
         className={`${
@@ -43,11 +43,24 @@ const Navbar = () => {
       </Link>
 
       <div className="gap-8 hidden md:flex text-white font-medium mix-blend-difference">
-        <Link href={"/about"}>About</Link>
-        <Link href={"/films"}>Films</Link>
-        <Link href={"/telepathy"}>Telepathy</Link>
-        <Link href={"/media"}>Media</Link>
-        <Link href={"/#contact"}>Contact</Link>
+        <Link
+          href={"/about"}
+          className="bg-[#f4f4f4] text-black px-2 py-0.5 hover:bg-[#2A5311] hover:text-white hover:rounded-none transition-all duration-200 ease-in-out"
+        >
+          About
+        </Link>
+        <Link href={"/films"} className="nav-buttons">
+          Films
+        </Link>
+        <Link href={"/telepathy"} className="nav-buttons">
+          Telepathy
+        </Link>
+        <Link href={"/media"} className="nav-buttons">
+          Media
+        </Link>
+        <Link href={"/#contact"} className="nav-buttons">
+          Contact
+        </Link>
       </div>
       <div className="block md:hidden">
         {/* replace with hamburger menu later */}

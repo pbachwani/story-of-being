@@ -107,7 +107,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl">
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
             <h1 className="text-5xl font-bold">Films</h1>
-            <p>A cinematic storytelling</p>
+            <p className="text-center">A cinematic storytelling</p>
           </div>
           <div className="w-full flex flex-col justify-center items-center gap-4 max-md:p-10">
             <img
@@ -119,11 +119,11 @@ const Hero = () => {
           </div>
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
             <h1 className="text-5xl font-bold">Telepathy</h1>
-            <p>Speak to your animals and plants</p>
+            <p className="text-center">Speak to your animals and plants</p>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
         <div className="w-fit px-8">
           <p className="text-nowrap">Two worlds</p>
         </div>
