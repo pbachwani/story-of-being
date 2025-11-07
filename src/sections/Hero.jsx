@@ -105,10 +105,10 @@ const Hero = () => {
         </div>
       </div> */}
       <div className="absolute top-0 left-0 w-full h-full min-h-screen flex flex-col justify-center items-center text-white bg-black/20 max-md:flex-col">
-        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl gap-10">
           {/* left col */}
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-5xl font-bold">Films</h1>
+            <h1 className="text-4xl font-bold">Films</h1>
             <p className="text-center">A cinematic storytelling</p>
           </div>
           {/* center image */}
@@ -124,7 +124,7 @@ const Hero = () => {
           </div>
           {/* right col */}
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-5xl font-bold">Telepathy</h1>
+            <h1 className="text-4xl font-bold">Telepathy</h1>
             <p className="text-center">Speak to your animals and plants</p>
           </div>
         </div>
