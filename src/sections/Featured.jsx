@@ -9,7 +9,7 @@ const Featured = () => {
         <div className=" w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#587525]/30 text-white">
           {/* left */}
           <div className="md:col-span-8 col-span-12 h-full md:p-8 p-4">
-            <div className="p-0 h-full bg-gray-200/80 rounded-xl flex justify-center items-center text-black">
+            <div className="p-0 h-full bg-gray-200/80 rounded-xl flex justify-center items-center text-black aspect-video">
               for featured image / video
             </div>
           </div>
@@ -32,7 +32,7 @@ const Featured = () => {
           <div className="md:w-1/2 w-full min-h-[50vh] rounded-xl flex flex-col border border-white bg-[#2A5311]/40">
             {/* left */}
             <div className="h-full md:p-4 p-4">
-              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center">
+              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center aspect-video">
                 for featured image / video
               </div>
             </div>
@@ -53,7 +53,7 @@ const Featured = () => {
           <div className="md:w-1/2 w-full min-h-[50vh] rounded-xl flex flex-col border border-white bg-[#142a07]/80">
             {/* left */}
             <div className="h-full md:p-4 p-4">
-              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center">
+              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center aspect-video">
                 for featured image / video
               </div>
             </div>

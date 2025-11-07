@@ -2,51 +2,43 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import clsx from "clsx";
 
 const Navbar = () => {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-  const [scrolled, setScrolled] = useState(false);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    if (isHome) {
-      const handleScroll = () => setScrolled(window.scrollY > 80);
-      window.addEventListener("scroll", handleScroll);
-    } else {
-      const handleScroll = () => setScrolled(window.scrollY > 0);
-      window.addEventListener("scroll", handleScroll);
-    }
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY > lastScrollY && currentY > 50) {
+        // scrolling down
+        setShow(false);
+      } else {
+        // scrolling up
+        setShow(true);
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+  }, [lastScrollY]);
   return (
-    <nav className="fixed top-0 left-0 z-50 w-screen h-24 flex justify-between items-center px-10 md:px-16 text-[##2A5312] text-lg font-semibold">
-      <Link
-        href="/"
-        className={`${
-          isHome
-            ? scrolled
-              ? "opacity-100 transition-opacity duration-2000"
-              : "opacity-0 transition-opacity duration-75"
-            : "opacity-100"
-        }`}
-      >
-        <div className="flex justify-center items-center gap-4">
-          <img
-            src="/logo-green-nobg.png"
-            alt=""
-            className="object-contain w-16 h-auto"
-          />
-
-          {/* <p className="font-abril opacity-80">Story of Being</p> */}
-        </div>
-      </Link>
-
-      <div className="gap-8 hidden md:flex text-white font-medium mix-blend-difference">
-        <Link
-          href={"/about"}
-          className="bg-[#f4f4f4] text-black px-2 py-0.5 hover:bg-[#2A5311] hover:text-white hover:rounded-none transition-all duration-200 ease-in-out"
-        >
+    <motion.nav
+      className={clsx(
+        "fixed top-0 left-0 z-50 w-screen h-24 flex justify-center items-center text-lg font-semibold transition-transform duration-500 ease-out",
+        show ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
+      <div className="gap-6 hidden md:flex text-white font-medium backdrop-blur-xl bg-[#0037b]/10 bg-black/20 p-4 rounded-lg">
+        <Link href={"/"} className="nav-buttons">
+          Home
+        </Link>
+        <Link href={"/about"} className="nav-buttons">
           About
         </Link>
         <Link href={"/films"} className="nav-buttons">
@@ -66,7 +58,7 @@ const Navbar = () => {
         {/* replace with hamburger menu later */}
         <p>...</p>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

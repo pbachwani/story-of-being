@@ -33,5 +33,5 @@ body {
 }
 
 .nav-buttons {
-  @apply bg-[#f4f4f4]/0 border-b text-white px-2 py-0.5 hover:border-none hover:bg-[#f4f4f4] hover:text-black hover:rounded-none transition-all duration-200 ease-in-out;
+  @apply text-white px-2 py-0.5 hover:text-black hover:rounded-none transition-all duration-200 ease-in-out;
 }
