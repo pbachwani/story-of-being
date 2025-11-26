@@ -27,11 +27,19 @@
 } */
 
 body {
-  background: var(--background);
+  /* background: var(--background); */
   color: #171717;
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 }
 
 .nav-buttons {
   @apply text-white px-2 py-0.5 hover:text-black hover:rounded-none transition-all duration-200 ease-in-out;
+}
+/* 
+li.active {
+  @apply opacity-100;
+} */
+
+span.active {
+  @apply opacity-100;
 }

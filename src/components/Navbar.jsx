@@ -34,7 +34,7 @@ const Navbar = () => {
         show ? "translate-y-0" : "-translate-y-full"
       )}
     >
-      <div className="gap-6 hidden md:flex text-white font-medium backdrop-blur-xl bg-[#0037b]/10 bg-black/20 p-4 rounded-lg text-[16px]">
+      <div className="gap-6 hidden md:flex text-white font-medium backdrop-blur-xl bg-black/20 p-4 rounded-lg text-[16px]">
         <Link href={"/"} className="nav-buttons">
           Home
         </Link>

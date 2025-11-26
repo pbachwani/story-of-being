@@ -2,21 +2,25 @@ import React from "react";
 
 const Featured = () => {
   return (
-    <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 max-w-[1440px] mx-auto">
-      <div className="flex flex-col gap-10">
-        <h1 className="font-abril text-4xl">Featured Films</h1>
+    <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 mx-auto bg-background">
+      <div className="flex flex-col gap-10 max-w-[1440px]">
+        <h1 className="font-abril text-4xl lg:text-7xl">Featured Films</h1>
         {/* card 1 */}
-        <div className=" w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#587525]/30 text-white">
+        <div className=" w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#2A5311]/30 text-white hover:bg-[#2A5311]/80 transition-colors duration-300">
           {/* left */}
           <div className="md:col-span-8 col-span-12 h-full md:p-8 p-4">
-            <div className="p-0 h-full bg-gray-200/80 rounded-xl flex justify-center items-center text-black aspect-video">
-              for featured image / video
+            <div className="p-0 h-full rounded-xl flex justify-center items-center text-black aspect-video">
+              <img
+                src="/featured/1.png"
+                alt="first"
+                className="object-cover w-full h-fit rounded-xl"
+              />
             </div>
           </div>
 
           {/* right */}
-          <div className="md:col-span-4 col-span-12 p-0">
-            <div className=" md:p-8 p-4 h-full w-full flex flex-col justify-between items-start">
+          <div className="md:col-span-2 col-span-12 p-0">
+            <div className=" md:p-8 p-4 h-full w-full flex flex-col justify-between items-end">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.

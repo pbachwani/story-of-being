@@ -42,37 +42,39 @@ const Brands = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section className="pt-24 px-4 md:px-16 overflow-x-clip max-w-[1440px] mx-auto">
-      <h2 className="font-abril text-4xl">Brands & associations</h2>
-      <div className="py-10">
-        <Image src={line} alt="top line" className="mx-auto mt-2" />
+    <section className="pt-24 px-4 md:px-16 overflow-x-clip mx-auto bg-background">
+      <div className="max-w-[1440px]">
+        <h2 className="font-abril text-4xl">Brands & associations</h2>
+        <div className="py-10">
+          <Image src={line} alt="top line" className="mx-auto mt-2" />
 
-        <div className="py-0 flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-          <motion.div
-            animate={{ x: "-50%" }}
-            transition={{
-              duration: 50,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-            className="flex flex-none gap-24 pr-24"
-          >
-            {Array.from({ length: 2 }).map((_, i) => (
-              <React.Fragment key={i}>
-                {logos.map((logo) => (
-                  <Image
-                    src={logo.image}
-                    key={logo.name}
-                    alt={logo.name}
-                    height={60}
-                  />
-                ))}
-              </React.Fragment>
-            ))}
-            {/* <Image src={aavran} alt="AAvran logo" width={100} /> */}
-          </motion.div>
+          <div className="py-0 flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <motion.div
+              animate={{ x: "-50%" }}
+              transition={{
+                duration: 50,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="flex flex-none gap-24 pr-24"
+            >
+              {Array.from({ length: 2 }).map((_, i) => (
+                <React.Fragment key={i}>
+                  {logos.map((logo) => (
+                    <Image
+                      src={logo.image}
+                      key={logo.name}
+                      alt={logo.name}
+                      height={60}
+                    />
+                  ))}
+                </React.Fragment>
+              ))}
+              {/* <Image src={aavran} alt="AAvran logo" width={100} /> */}
+            </motion.div>
+          </div>
+          <Image src={line} alt="bottom line" className="mx-auto mt-10" />
         </div>
-        <Image src={line} alt="bottom line" className="mx-auto mt-10" />
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export default function Home() {
       <div className="sticky top-0 h-screen">
         <Hero />
       </div>
-      <div className="relative z-10 bg-white">
+      <div className="relative z-10">
         <Awards />
         <Featured />
         <Brands />

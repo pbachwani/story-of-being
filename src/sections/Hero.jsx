@@ -60,7 +60,7 @@ const Hero = () => {
     //     <span className="w-[90vw] bg-white h-1 rounded-full"></span>
     //   </div> */}
     // </section>
-    <section className="sticky top-0 -z-10 w-screen h-screen min-h-screen overflow-hidden">
+    <section className="w-screen h-screen min-h-screen overflow-hidden">
       <video
         className="w-full h-screen object-cover"
         src="/videos/clip3.mp4"
