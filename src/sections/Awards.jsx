@@ -52,7 +52,7 @@ const Awards = () => {
 
         <p
           ref={wrapperRef}
-          className="flex flex-wrap gap-6 mt-10 leading-tight"
+          className="flex flex-wrap gap-6 mt-10 leading-tight mx-2"
         >
           {awards.map((award, i) => (
             <span

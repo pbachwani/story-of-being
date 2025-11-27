@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Featured = () => {
@@ -6,72 +7,90 @@ const Featured = () => {
       <div className="flex flex-col gap-10 max-w-[1440px]">
         <h1 className="font-abril text-4xl lg:text-7xl">Featured Films</h1>
         {/* card 1 */}
-        <div className=" w-full h-[75vh] rounded-xl grid grid-cols-12 border border-white bg-[#2A5311]/30 text-white hover:bg-[#2A5311]/80 transition-colors duration-300">
-          {/* left */}
-          <div className="md:col-span-8 col-span-12 h-full md:p-8 p-4">
-            <div className="p-0 h-full rounded-xl flex justify-center items-center text-black aspect-video">
-              <img
-                src="/featured/1.png"
-                alt="first"
-                className="object-cover w-full h-fit rounded-xl"
-              />
-            </div>
-          </div>
 
-          {/* right */}
-          <div className="md:col-span-2 col-span-12 p-0">
-            <div className=" md:p-8 p-4 h-full w-full flex flex-col justify-between items-end">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <button>watch film</button>
-            </div>
+        <div className="w-full max-w-7xl h-full flex flex-col mx-auto">
+          <img
+            src={"/featured/2.png"}
+            alt="first"
+            className="w-full h-full object-cover rounded-xl"
+          />
+          <div className="flex flex-col md:flex-row w-full gap-10 mt-10">
+            <h2 className="md:w-1/2 md:text-end font-bold font-abril text-4xl tracking-wider">
+              Weaves Of Maheshwar
+            </h2>
+            <p className="md:w-1/2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
+              velit molestiae esse quis ullam explicabo ex placeat voluptatum
+              optio harum inventore quisquam id possimus, ut sequi voluptates
+              facere soluta, ipsa deleniti aliquid at vero provident omnis.
+              Excepturi inventore tempora consectetur totam temporibus ratione
+              impedit mollitia? Quisquam eos reiciendis ducimus explicabo.
+            </p>
           </div>
         </div>
 
-        {/* wrapper for bottom 2 cards */}
-        <div className="flex max-md:flex-col gap-10">
-          {/* card 2 */}
-          <div className="md:w-1/2 w-full min-h-[50vh] rounded-xl flex flex-col border border-white bg-[#2A5311]/40">
-            {/* left */}
-            <div className="h-full md:p-4 p-4">
-              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center aspect-video">
-                for featured image / video
-              </div>
-            </div>
-
-            {/* right */}
-            <div className="p-0">
-              <div className=" md:p-8 p-4 h-full w-full flex flex-col justify-between items-start gap-4">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>watch film</button>
-              </div>
-            </div>
+        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/1.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-abril font-bold text-2xl">
+              To Turn a Tide
+            </h2>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
+            </p>
           </div>
-
-          {/* card 3 */}
-          <div className="md:w-1/2 w-full min-h-[50vh] rounded-xl flex flex-col border border-white bg-[#142a07]/80">
-            {/* left */}
-            <div className="h-full md:p-4 p-4">
-              <div className="p-0 h-full min-h-48 bg-gray-200 rounded-xl flex justify-center items-center aspect-video">
-                for featured image / video
-              </div>
-            </div>
-
-            {/* right */}
-            <div className="p-0">
-              <div className=" md:p-8 p-4 h-full w-full flex flex-col justify-between items-start gap-4">
-                <p className="text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <button>watch film</button>
-              </div>
-            </div>
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/3.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-abril font-bold text-2xl">
+              Rajkumari Ratnavati School
+            </h2>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
+            </p>
+          </div>
+        </div>
+        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/1.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-abril font-bold text-2xl">
+              To Turn a Tide
+            </h2>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
+            </p>
+          </div>
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/3.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-abril font-bold text-2xl">
+              Rajkumari Ratnavati School
+            </h2>
+            <p className="mt-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
+            </p>
           </div>
         </div>
 

@@ -44,7 +44,9 @@ const Brands = () => {
   return (
     <section className="pt-24 px-4 md:px-16 overflow-x-clip mx-auto bg-background">
       <div className="max-w-[1440px]">
-        <h2 className="font-abril text-4xl">Brands & associations</h2>
+        <h2 className="font-abril text-4xl lg:text-7xl">
+          Brands & associations
+        </h2>
         <div className="py-10">
           <Image src={line} alt="top line" className="mx-auto mt-2" />
 
