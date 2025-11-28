@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import clsx from "clsx";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -54,9 +55,9 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <div className="block md:hidden">
+      <div className="flex justify-end md:hidden w-full pr-4">
         {/* replace with hamburger menu later */}
-        <p>...</p>
+        <Hamburger />
       </div>
     </motion.nav>
   );

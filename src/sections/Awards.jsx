@@ -47,17 +47,17 @@ const Awards = () => {
 
   return (
     <section className="w-screen h-full md:px-16 px-2 py-20 mx-auto rounded-t-2xl bg-background">
-      <div className="max-w-[1440px] h-full">
-        <h1 className="lg:text-7xl text-4xl font-abril">Awards</h1>
+      <div className="max-w-[1440px] h-full mx-auto">
+        <h1 className="md:text-7xl text-4xl font-abril">Awards</h1>
 
         <p
           ref={wrapperRef}
-          className="flex flex-wrap gap-6 mt-10 leading-tight mx-2"
+          className="flex flex-wrap text-wrap gap-2 md:gap-6 mt-10 leading mx-2"
         >
           {awards.map((award, i) => (
             <span
               key={i}
-              className="lg:text-4xl text-xl font-bold opacity-30 transition-all duration-300 text-[#2A5311] hover:opacity-100"
+              className="md:text-4xl text-2xl w-full font-bold opacity-30 transition-all duration-300 text-[#2A5311] hover:opacity-100 font-raleway"
             >
               {award}
             </span>

@@ -4,42 +4,75 @@ import React from "react";
 const Featured = () => {
   return (
     <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 mx-auto bg-background">
-      <div className="flex flex-col gap-10 max-w-[1440px]">
+      <div className="flex flex-col gap-10 max-w-[1440px] mx-auto">
         <h1 className="font-abril text-4xl lg:text-7xl">Featured Films</h1>
         {/* card 1 */}
 
-        <div className="w-full max-w-7xl h-full flex flex-col mx-auto">
+        <div className="w-full max-w-7xl h-full flex flex-col mx-auto md:mt-16 mt-10">
           <img
             src={"/featured/2.png"}
             alt="first"
             className="w-full h-full object-cover rounded-xl"
           />
-          <div className="flex flex-col md:flex-row w-full gap-10 mt-10">
-            <h2 className="md:w-1/2 md:text-end font-bold font-abril text-4xl tracking-wider">
+          <div className="flex flex-col md:flex-row w-full md:gap-10 gap-4 mt-10">
+            <h2 className="md:w-1/2 md:text-end font-bold font-raleway text-2xl md:text-4xl tracking-wider">
               Weaves Of Maheshwar
             </h2>
-            <p className="md:w-1/2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat,
-              velit molestiae esse quis ullam explicabo ex placeat voluptatum
-              optio harum inventore quisquam id possimus, ut sequi voluptates
-              facere soluta, ipsa deleniti aliquid at vero provident omnis.
-              Excepturi inventore tempora consectetur totam temporibus ratione
-              impedit mollitia? Quisquam eos reiciendis ducimus explicabo.
+            <p className="md:w-1/2 font-montserrat text-justify leading-tight">
+              Weaves of Maheshwar is a story about craft revival. The
+              documentary revolves around various journeys about people who have
+              made this change possible. In an era where the machines are taking
+              over the world India is the only country which still produces 90%
+              of handloom. Weaves of Maheshwar portrays this strength of Indian
+              textiles and our rich craft sector. The protagonists of this film
+              are a group of people who have facilitated this change.
+            </p>
+          </div>
+        </div>
+        {/* row 2 */}
+        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10 mt-10">
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/1.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-raleway font-bold text-2xl">
+              To Turn a Tide
+            </h2>
+            <p className="mt-2 font-montserrat text-justify leading-tight">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
+            </p>
+          </div>
+          <div className="md:w-1/2 w-full flex flex-col">
+            <img
+              src="/featured/3.png"
+              alt="first"
+              className="w-full h-full object-cover rounded-xl"
+            />
+            <h2 className="mt-8 font-raleway font-bold text-2xl">
+              Rajkumari Ratnavati School
+            </h2>
+            <p className="mt-2 font-montserrat text-justify leading-tight">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+              voluptas soluta, aperiam architecto sint esse autem voluptates
+              tempore adipisci dignissimos aspernatur amet cumque ex ad.
             </p>
           </div>
         </div>
 
+        {/* row 3 */}
         <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
           <div className="md:w-1/2 w-full flex flex-col">
             <img
-              src="/featured/1.png"
+              src="/featured/4.png"
               alt="first"
               className="w-full h-full object-cover rounded-xl"
             />
-            <h2 className="mt-8 font-abril font-bold text-2xl">
-              To Turn a Tide
-            </h2>
-            <p className="mt-2">
+            <h2 className="mt-8 font-raleway font-bold text-2xl">The Dawn</h2>
+            <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
               tempore adipisci dignissimos aspernatur amet cumque ex ad.
@@ -47,46 +80,14 @@ const Featured = () => {
           </div>
           <div className="md:w-1/2 w-full flex flex-col">
             <img
-              src="/featured/3.png"
+              src="/featured/5.png"
               alt="first"
               className="w-full h-full object-cover rounded-xl"
             />
-            <h2 className="mt-8 font-abril font-bold text-2xl">
-              Rajkumari Ratnavati School
+            <h2 className="mt-8 font-raleway font-bold text-2xl">
+              Tholubomalatta
             </h2>
-            <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-              voluptas soluta, aperiam architecto sint esse autem voluptates
-              tempore adipisci dignissimos aspernatur amet cumque ex ad.
-            </p>
-          </div>
-        </div>
-        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
-          <div className="md:w-1/2 w-full flex flex-col">
-            <img
-              src="/featured/1.png"
-              alt="first"
-              className="w-full h-full object-cover rounded-xl"
-            />
-            <h2 className="mt-8 font-abril font-bold text-2xl">
-              To Turn a Tide
-            </h2>
-            <p className="mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-              voluptas soluta, aperiam architecto sint esse autem voluptates
-              tempore adipisci dignissimos aspernatur amet cumque ex ad.
-            </p>
-          </div>
-          <div className="md:w-1/2 w-full flex flex-col">
-            <img
-              src="/featured/3.png"
-              alt="first"
-              className="w-full h-full object-cover rounded-xl"
-            />
-            <h2 className="mt-8 font-abril font-bold text-2xl">
-              Rajkumari Ratnavati School
-            </h2>
-            <p className="mt-2">
+            <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
               tempore adipisci dignissimos aspernatur amet cumque ex ad.
