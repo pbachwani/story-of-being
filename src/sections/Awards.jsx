@@ -29,7 +29,7 @@ const Awards = () => {
 
     let trigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
-      start: "top 70%",
+      start: "top 60%",
       end: "bottom center",
       scrub: true,
       onUpdate: (self) => {

@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -12,7 +13,7 @@ const Featured = () => {
           <img
             src={"/featured/2.png"}
             alt="first"
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
           />
           <div className="flex flex-col md:flex-row w-full md:gap-10 gap-4 mt-10">
             <h2 className="md:w-1/2 md:text-end font-bold font-raleway text-2xl md:text-4xl tracking-wider">
@@ -35,11 +36,16 @@ const Featured = () => {
             <img
               src="/featured/1.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
-            <h2 className="mt-8 font-raleway font-bold text-2xl">
-              To Turn a Tide
-            </h2>
+            <div className="w-full flex justify-between items-end">
+              <h2 className="mt-8 font-raleway font-bold text-2xl">
+                To Turn a Tide
+              </h2>
+              <span>
+                <ChevronRight size={32} />
+              </span>
+            </div>
             <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
@@ -50,11 +56,17 @@ const Featured = () => {
             <img
               src="/featured/3.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
-            <h2 className="mt-8 font-raleway font-bold text-2xl">
-              Rajkumari Ratnavati School
-            </h2>
+
+            <div className="w-full flex justify-between items-end">
+              <h2 className="mt-8 font-raleway font-bold text-2xl">
+                Rajkumari Ratnavati School
+              </h2>
+              <span>
+                <ChevronRight size={32} />
+              </span>
+            </div>
             <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
@@ -69,9 +81,14 @@ const Featured = () => {
             <img
               src="/featured/4.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
-            <h2 className="mt-8 font-raleway font-bold text-2xl">The Dawn</h2>
+            <div className="w-full flex justify-between items-end">
+              <h2 className="mt-8 font-raleway font-bold text-2xl">The Dawn</h2>
+              <span>
+                <ChevronRight size={32} />
+              </span>
+            </div>
             <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
@@ -82,11 +99,16 @@ const Featured = () => {
             <img
               src="/featured/5.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
-            <h2 className="mt-8 font-raleway font-bold text-2xl">
-              Tholubomalatta
-            </h2>
+            <div className="w-full flex justify-between items-end">
+              <h2 className="mt-8 font-raleway font-bold text-2xl">
+                Tholubomalatta
+              </h2>
+              <span>
+                <ChevronRight size={32} />
+              </span>
+            </div>
             <p className="mt-2 font-montserrat text-justify leading-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
               voluptas soluta, aperiam architecto sint esse autem voluptates
