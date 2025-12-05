@@ -42,7 +42,7 @@ const Brands = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section className="w-screen pt-24 px-4 md:px-16 overflow-x-clip mx-auto bg-background rounded-b-2xl">
+    <section className="w-screen pt-24 px-4 md:px-16 overflow-x-clip mx-auto bg-background">
       <div className="max-w-[1440px] mx-auto">
         <h2 className="font-abril text-4xl lg:text-7xl">
           Brands & associations

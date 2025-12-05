@@ -1,4 +1,4 @@
-const films = [
+const filmsData = [
   {
     name: "Block Printing",
     year: "2013-14",
@@ -353,4 +353,4 @@ const films = [
   },
 ];
 
-export { films };
+export { filmsData };
