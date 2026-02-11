@@ -10,6 +10,11 @@ const abril_fatface = Abril_Fatface({
   weight: "400",
   variable: "--font-abril",
 });
+const raleway = Raleway({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-raleway",
+});
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,11 +22,11 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-const raleway = Raleway({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-raleway",
-});
+// const Boska = boska({
+//   subsets: ["latin"],
+//   display: "swap",
+//   variable: "--font-boska",
+// });
 export const metadata = {
   title: "Story of Being",
   description:

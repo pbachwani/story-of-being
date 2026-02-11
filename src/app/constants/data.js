@@ -1,18 +1,18 @@
 const filmsData = [
   {
-    name: "Block Printing",
-    year: "2013-14",
-    client: "Anantaya Decore",
-    director: "Keya and Nidhi",
-    link: "https://youtu.be/dBNivbpSERQ",
-    category: "craft",
-  },
-  {
     name: "Namda",
     year: "2013-14",
     client: "Anantaya Decore",
     director: "Keya and Nidhi",
     link: "https://youtu.be/2Uzipl1ztFI",
+    category: "craft",
+  },
+  {
+    name: "Block Printing",
+    year: "2013-14",
+    client: "Anantaya Decore",
+    director: "Keya and Nidhi",
+    link: "https://youtu.be/dBNivbpSERQ",
     category: "craft",
   },
   {

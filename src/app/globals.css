@@ -9,6 +9,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Boska";
+  src: url("/fonts/Boska-Variable.ttf") format("truetype");
+  font-weight: 100 300 500 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -17,6 +25,7 @@
   --font-montserrat: var(--font-montserrat);
   --font-raleway: var(--font-raleway);
   --font-abril: var(--font-abril);
+  --font-boska: "Boska";
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -43,3 +52,13 @@ li.active {
 span.active {
   @apply opacity-100;
 }
+
+/* .marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+} */

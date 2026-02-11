@@ -16,7 +16,7 @@ const Featured = () => {
             className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
           />
           <div className="flex flex-col md:flex-row w-full md:gap-10 gap-4 mt-10">
-            <h2 className="md:w-1/2 md:text-end font-bold font-raleway text-2xl md:text-4xl tracking-wider">
+            <h2 className="md:w-1/2 md:text-end font-extrabold font-boska text-2xl md:text-4xl tracking-wider">
               Weaves Of Maheshwar
             </h2>
             <p className="md:w-1/2 font-montserrat text-justify leading-tight">
@@ -39,7 +39,7 @@ const Featured = () => {
               className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
             <div className="w-full flex justify-between items-end">
-              <h2 className="mt-8 font-raleway font-bold text-2xl">
+              <h2 className="mt-8 font-boska font-extrabold text-2xl">
                 To Turn a Tide
               </h2>
               <span>
@@ -60,7 +60,7 @@ const Featured = () => {
             />
 
             <div className="w-full flex justify-between items-end">
-              <h2 className="mt-8 font-raleway font-bold text-2xl">
+              <h2 className="mt-8 font-boska font-extrabold text-2xl">
                 Rajkumari Ratnavati School
               </h2>
               <span>
@@ -84,7 +84,9 @@ const Featured = () => {
               className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
             <div className="w-full flex justify-between items-end">
-              <h2 className="mt-8 font-raleway font-bold text-2xl">The Dawn</h2>
+              <h2 className="mt-8 font-boska font-extrabold text-2xl">
+                The Dawn
+              </h2>
               <span>
                 <ChevronRight size={32} />
               </span>
@@ -102,7 +104,7 @@ const Featured = () => {
               className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
             />
             <div className="w-full flex justify-between items-end">
-              <h2 className="mt-8 font-raleway font-bold text-2xl">
+              <h2 className="mt-8 font-boska font-extrabold text-2xl">
                 Tholubomalatta
               </h2>
               <span>
