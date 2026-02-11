@@ -35,7 +35,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
-      ></video>
+      />
 
       <div
         ref={contentRef}
