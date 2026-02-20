@@ -31,12 +31,14 @@ const Hero = () => {
         playsInline
         preload="auto"
         className="w-full h-screen object-cover"
-        src="/videos/clip3.mp4"
+        // src="/videos/clip3.mp4"
         type="video/mp4"
         autoPlay
         loop
         muted
-      />
+      >
+        <source src="/videos/clip3.mp4" type="video/mp4" />
+      </video>
 
       <div
         ref={contentRef}

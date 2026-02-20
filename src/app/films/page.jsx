@@ -17,7 +17,7 @@ const films = () => {
             <div>filters</div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-x-2 space-x-2 space-y-4 mt-28">
-            {filmsData.map((film, index) => (
+            {filmsData?.map((film, index) => (
               <div
                 key={index}
                 className="w-full flex flex-col gap-2 justify-start"
