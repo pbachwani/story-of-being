@@ -29,10 +29,8 @@ const Hero = () => {
     <section className="w-screen h-screen min-h-screen overflow-hidden">
       <video
         playsInline
-        preload="eager"
+        preload="auto"
         className="w-full h-screen object-cover"
-        // src="/videos/clip3.mp4"
-        type="video/mp4"
         autoPlay
         loop
         muted
