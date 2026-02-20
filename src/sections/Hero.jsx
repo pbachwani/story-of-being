@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
+import AnimatedLink from "@/components/AnimatedLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,15 +45,19 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl gap-10">
           {/* left col */}
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-4xl font-bold">Films</h1>
-            <p className="text-center">A cinematic storytelling</p>
+            <h1 className="text-4xl font-bold">
+              <AnimatedLink href="/films">Films</AnimatedLink>
+            </h1>
+            <p className="text-center md:px-4">
+              Explore cinematic projects, storytelling, and films.
+            </p>
           </div>
           {/* center image */}
           <div className="w-full flex flex-col justify-center items-center gap-4 max-md:p-10">
             <img
-              src="/logo-green-light.png"
+              src="/logo-final.png"
               alt="story of being logo"
-              className="max-md:max-w-40"
+              className="max-md:max-w-60"
             />
             <p className="font-bold font-raleway tracking-wide mt-2 hidden">
               Two worlds - one journey
@@ -60,8 +65,13 @@ const Hero = () => {
           </div>
           {/* right col */}
           <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-4xl font-bold">Telepathy</h1>
-            <p className="text-center">Speak to your animals and plants</p>
+            <h1 className="text-4xl font-bold">
+              <AnimatedLink href="/telepathy">Telepathy</AnimatedLink>
+            </h1>
+            <p className="text-center md:px-4">
+              Discover sessions and insights on connecting deeply with animals &
+              Nature.
+            </p>
           </div>
         </div>
       </div>

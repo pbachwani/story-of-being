@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import clsx from "clsx";
 import HamburgerComponent from "./HamburgerComponent";
 import MotionDrawer from "./MotionDrawer";
+import AnimatedLink from "./AnimatedLink";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -34,28 +35,28 @@ const Navbar = () => {
       <motion.nav
         className={clsx(
           "fixed top-0 left-0 z-50 w-screen h-24 flex justify-center items-center font-semibold transition-transform duration-500 ease-out",
-          show ? "translate-y-0" : "-translate-y-full"
+          show ? "translate-y-0" : "-translate-y-full",
         )}
       >
-        <div className="gap-6 hidden md:flex text-white font-medium backdrop-blur-xl bg-black/20 p-4 rounded-lg ">
-          <Link href={"/"} className="nav-buttons">
+        <div className="gap-6 hidden md:flex text-white font-medium backdrop-blur-xl bg-black/20 p-4 rounded-lg space-x-4">
+          <AnimatedLink href={"/"} className="nav-buttons">
             Home
-          </Link>
-          <Link href={"/about"} className="nav-buttons">
+          </AnimatedLink>
+          <AnimatedLink href={"/about"} className="nav-buttons">
             About
-          </Link>
-          <Link href={"/films"} className="nav-buttons">
+          </AnimatedLink>
+          <AnimatedLink href={"/films"} className="nav-buttons">
             Films
-          </Link>
-          <Link href={"/telepathy"} className="nav-buttons">
+          </AnimatedLink>
+          <AnimatedLink href={"/telepathy"} className="nav-buttons">
             Telepathy
-          </Link>
-          <Link href={"/media"} className="nav-buttons">
+          </AnimatedLink>
+          <AnimatedLink href={"/media"} className="nav-buttons">
             Media
-          </Link>
-          <Link href={"/#contact"} className="nav-buttons">
+          </AnimatedLink>
+          <AnimatedLink href={"/#contact"} className="nav-buttons">
             Contact
-          </Link>
+          </AnimatedLink>
         </div>
       </motion.nav>
       <div className="md:hidden w-full h-full absolute z-50 top-0 right-0">

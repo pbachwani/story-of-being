@@ -9,11 +9,11 @@ const about = () => {
     <main className="w-full h-full min-h-screen overflow-x-clip">
       {/* <Slider /> */}
       <div className="flex items-center justify-center relative h-[600px]">
-        <div className="absolute bottom-40 flex flex-col justify-center items-center gap-4 z-10">
+        <div className="absolute top-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4 z-10">
           <h2 className="text-white font-boska font-extrabold text-4xl md:text-6xl">
             Story of Being
           </h2>
-          <p className="font-montserrat text-white font-bold md:w-4/5 max-md:px-4 text-sm text-center backdrop-blur-[1.5px] rounded-full">
+          <p className="font-montserrat text-white font-bold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full">
             Two worlds—one journey: cinematic storytelling as an accomplished
             film director, and deep connection with nature as an animal and
             Nature whisperer, all part of the Story of Being.

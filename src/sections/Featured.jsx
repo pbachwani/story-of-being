@@ -6,14 +6,14 @@ const Featured = () => {
   return (
     <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 mx-auto bg-background">
       <div className="flex flex-col gap-10 max-w-[1440px] mx-auto">
-        <h1 className="font-abril text-4xl lg:text-7xl">Featured Films</h1>
+        <h1 className="font-abril text-2xl md:text-4xl">Featured Films</h1>
         {/* card 1 */}
 
-        <div className="w-full max-w-7xl h-full flex flex-col mx-auto md:mt-16 mt-10">
+        <div className="w-full max-w-7xl h-full flex flex-col mx-auto md:mt-8 mt-4">
           <img
             src={"/featured/2.png"}
             alt="first"
-            className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
+            className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
           />
           <div className="flex flex-col md:flex-row w-full md:gap-10 gap-4 mt-10">
             <h2 className="md:w-1/2 md:text-end font-extrabold font-boska text-2xl md:text-4xl tracking-wider">
@@ -36,7 +36,7 @@ const Featured = () => {
             <img
               src="/featured/1.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
+              className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
             />
             <div className="w-full flex justify-between items-end">
               <h2 className="mt-8 font-boska font-extrabold text-2xl">
@@ -56,7 +56,7 @@ const Featured = () => {
             <img
               src="/featured/3.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
+              className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
             />
 
             <div className="w-full flex justify-between items-end">
@@ -81,7 +81,7 @@ const Featured = () => {
             <img
               src="/featured/4.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
+              className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
             />
             <div className="w-full flex justify-between items-end">
               <h2 className="mt-8 font-boska font-extrabold text-2xl">
@@ -101,7 +101,7 @@ const Featured = () => {
             <img
               src="/featured/5.png"
               alt="first"
-              className="w-full h-full object-cover rounded-xl hover:scale-[101%] transition-all duration-500 ease-out hover:rounded-sm"
+              className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
             />
             <div className="w-full flex justify-between items-end">
               <h2 className="mt-8 font-boska font-extrabold text-2xl">

@@ -8,23 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const telepathy = () => {
   return (
-    <main className="w-full min-h-screen pt-24 bg-[#FFFAED]">
+    <main className="w-full min-h-screen bg-[#FFFAED]">
       {/* top */}
-      <div className="h-[30vh] z-30 flex flex-col justify-center items-center">
+      <div className="h-[600px] z-30 flex flex-col justify-center items-center relative text-white">
+        <img
+          src="/telepathy/1.jpg"
+          alt="cover image"
+          className="absolute inset-0 object-cover w-full h-full -z-10"
+        />
         <h1 className="font-boska font-black text-3xl mt-10">
           Telepathic Communication
         </h1>
         <p className="font-boska font-bold text-xl">
           Connecting Hearts Beyond Words
         </p>
-        <p className="font-montserrat text-center max-w-4xl mt-10">
+        <p className="font-montserrat text-white font-semibold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full mt-10">
           Welcome to the Telepathic Communication experience—a unique path to
           deepen your connection with your beloved pets, plant companions, and
           the natural world around you.
         </p>
       </div>
       {/* bottom cards */}
-      <section className="mt-40 w-full md:w-[90vw] mx-auto relative gap-10 flex flex-col">
+      <section className="mt-20 w-full md:w-[90vw] mx-auto relative gap-10 flex flex-col">
         <div className="h-screen md:h-[70vh] p-0 border-black/20 flex flex-col md:flex-row items-center gap-0 md:gap-10 sticky top-4 md:top-[15%] bg-[#FFFAED]">
           <div className="flex flex-col justify-start gap-10 md:gap-20 p-6 md:py-10 w-full md:w-3/5">
             <h1 className="font-boska font-[900] text-4xl">Who I Am</h1>
@@ -102,7 +107,7 @@ const telepathy = () => {
       {/* book a calendy call section */}
       <div
         // transition={{star}}
-        className="h-screen z-40 py-24"
+        className="h-screen z-40 py-12 mt-10"
         id="clip"
       >
         Book a Session

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Abril_Fatface, Montserrat, Raleway } from "next/font/google";
 
 import { ReactLenis } from "lenis/react";
+import { LenisProvider } from "@/components/LenisProvider";
 
 const abril_fatface = Abril_Fatface({
   subsets: ["latin"],
@@ -40,9 +41,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.variable} ${raleway.variable} ${abril_fatface.variable} antialiased`}
       >
-        <ReactLenis root />
-        <Navbar />
-        {children}
+        {/* <ReactLenis root /> */}
+        <LenisProvider>
+          <Navbar />
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );

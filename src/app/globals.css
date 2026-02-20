@@ -42,7 +42,7 @@ body {
 }
 
 .nav-buttons {
-  @apply text-white px-2 py-0.5 hover:text-black hover:rounded-none transition-all duration-200 ease-in-out;
+  @apply py-0.5;
 }
 /* 
 li.active {
