@@ -4,6 +4,7 @@ import { Abril_Fatface, Montserrat, Raleway } from "next/font/google";
 
 import { ReactLenis } from "lenis/react";
 import { LenisProvider } from "@/components/LenisProvider";
+import Script from "next/script";
 
 const abril_fatface = Abril_Fatface({
   subsets: ["latin"],
@@ -37,7 +38,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        {/* <!-- Google tag (gtag.js) --> */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EDZ8RPFG5G"
+        ></Script>
+        <Script>
+          <Script>
+            {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EDZ8RPFG5G');`}
+          </Script>
+        </Script>
+      </head>
       <body
         className={`${montserrat.variable} ${raleway.variable} ${abril_fatface.variable} antialiased`}
       >

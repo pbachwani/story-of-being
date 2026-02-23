@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     setSubmitting(true);
     const url =
-      "https://script.google.com/macros/s/AKfycbwG3mBm3-iYw8opdJ1fC2K1ClF17O-huKAZAc6bIHgOWFvzIi7TpmMtIl_ASRbmhmoA/exec";
+      "https://script.google.com/macros/s/AKfycby8Fit0wD3YKZlQJUx7AjnD01jkecJAKcYsebnd8Y3G0VqBVzYZJnL5dUy5EMQrDVRr/exec";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -52,20 +52,25 @@ const Contact = () => {
           {/* LEFT TEXT */}
           <div className="max-w-md text-white/80 leading-relaxed">
             <p>
-              Whether it’s a film, collaboration, or just a conversation — feel
-              free to reach out.
+              Whether it&apos;s a film, collaboration, or just a conversation —
+              feel free to reach out.
             </p>
             <p className="mt-4">
-              I’m always open to meaningful stories and interesting ideas.
+              I&apos;m always open to meaningful stories and interesting ideas.
             </p>
           </div>
 
           {/* FORM */}
-          <form className="flex flex-col gap-6 backdrop-blur-md bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
+          <form
+            onSubmit={handleSubmit}
+            disabled={submitting}
+            className="flex flex-col gap-6 backdrop-blur-md bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10"
+          >
             {/* NAME */}
             <div className="flex flex-col gap-2">
               <label className="text-sm text-white/60">Name</label>
               <input
+                name="name"
                 type="text"
                 placeholder="Your name"
                 className="bg-transparent border-b border-white/20 focus:border-white outline-none py-2 placeholder:text-white/40 transition-all"
@@ -76,6 +81,7 @@ const Contact = () => {
             <div className="flex flex-col gap-2">
               <label className="text-sm text-white/60">Email</label>
               <input
+                name="email"
                 type="email"
                 placeholder="you@email.com"
                 className="bg-transparent border-b border-white/20 focus:border-white outline-none py-2 placeholder:text-white/40 transition-all"
@@ -86,6 +92,7 @@ const Contact = () => {
             <div className="flex flex-col gap-2">
               <label className="text-sm text-white/60">Message</label>
               <textarea
+                name="message"
                 rows="4"
                 placeholder="Tell me about your project..."
                 className="bg-transparent border-b border-white/20 focus:border-white outline-none py-2 placeholder:text-white/40 transition-all resize-none"
@@ -94,8 +101,9 @@ const Contact = () => {
 
             {/* BUTTON */}
             <button
+              disabled={submitting}
               type="submit"
-              className="mt-4 bg-white text-black px-6 py-3 rounded-full w-fit hover:bg-white/90 transition-all"
+              className={`mt-4 bg-white text-black px-6 py-3 rounded-full w-fit hover:bg-white/90 transition-all ${submitting ? "cursor-not-allowed opacity-70" : ""}`}
             >
               Send Message
             </button>
