@@ -1,5 +1,6 @@
 "use client";
 
+import Contact from "@/sections/Contact";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -16,16 +17,20 @@ export default function FullscreenImage() {
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["32px", "0px"]);
 
   return (
-    <div ref={ref} className="h-screen flex items-center justify-center mt-24">
+    <div
+      ref={ref}
+      className="h-screen flex items-center justify-center mt-24 relative overflow-y-scroll"
+    >
       <motion.div
         style={{ width, height, borderRadius }}
-        className="overflow-hidden"
+        className="overflow-hidden relative"
       >
         <img
           src="/aboutpage/8.jpg"
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover absolute inset-0"
         />
+        <Contact />
       </motion.div>
     </div>
   );

@@ -36,28 +36,57 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black"
+      className="relative w-full min-h-screen md:min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black"
     >
       <Toaster />
 
-      <div className="py-20 text-white max-w-[1440px] mx-auto flex flex-col gap-16">
+      <div className="md:py-20 py-10 text-white max-w-[1440px] mx-auto flex flex-col md:gap-16 gap-8">
         {/* HEADER */}
         <div className="flex flex-col gap-2">
-          <p className="text-sm text-white/70">Give me a toast</p>
           <h1 className="font-abril text-4xl md:text-6xl">Contact</h1>
         </div>
 
         {/* CONTENT */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* LEFT TEXT */}
-          <div className="max-w-md text-white/80 leading-relaxed">
-            <p>
-              Whether it&apos;s a film, collaboration, or just a conversation —
-              feel free to reach out.
-            </p>
-            <p className="mt-4">
-              I&apos;m always open to meaningful stories and interesting ideas.
-            </p>
+          {/* LEFT LINKS */}
+          <div className="max-w-md text-white/80 flex flex-col">
+            {[
+              {
+                name: "Instagram",
+                sub: "@keya.vaswani",
+                link: "https://www.instagram.com/keya.vaswani",
+              },
+              {
+                name: "Story of Being",
+                sub: "@story.of.being",
+                link: "https://www.instagram.com/story.of.being",
+              },
+              {
+                name: "LinkedIn",
+                sub: "View profile",
+                link: "https://www.linkedin.com/in/keya-vaswani-9b86a938",
+              },
+            ].map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group flex items-center justify-between py-3"
+              >
+                {/* TEXT */}
+                <span className="text-lg font-raleway">{item.name}</span>
+
+                <span className="text-sm opacity-60 group-hover:opacity-100 transition">
+                  {item.sub} →
+                </span>
+
+                {/* BASE LINE */}
+                <span className="absolute bottom-0 left-0 h-[1px] w-full bg-white/20 overflow-hidden">
+                  <span className="block h-full w-0 bg-white transition-all duration-300 ease-out group-hover:w-full" />
+                </span>
+              </a>
+            ))}
           </div>
 
           {/* FORM */}

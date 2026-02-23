@@ -3,8 +3,10 @@ import FullscreenImage from "@/components/FullscreenImage";
 import ImageMarqueeScroll from "@/components/ImageMarqueeScroll";
 import Slider from "@/components/Slider";
 import React from "react";
+import { projects } from "../constants/data";
 
 const about = () => {
+  const projectCovers = projects?.map((project) => project.cover);
   return (
     <main className="w-full h-full min-h-screen overflow-x-clip">
       {/* <Slider /> */}
@@ -84,28 +86,7 @@ const about = () => {
 
       <div className="mt-24 overflow-hidden w-full marquee-mask">
         <ImageMarqueeScroll
-          images={[
-            "/aboutpage/1.jpg",
-            "/aboutpage/2.jpg",
-            "/aboutpage/3.jpg",
-            "/aboutpage/4.jpg",
-            "/aboutpage/5.jpg",
-            "/aboutpage/6.jpg",
-            "/aboutpage/7.jpg",
-            "/aboutpage/8.jpg",
-            "/aboutpage/9.jpg",
-            "/aboutpage/10.jpg",
-            "/aboutpage/1.jpg",
-            "/aboutpage/2.jpg",
-            "/aboutpage/3.jpg",
-            "/aboutpage/4.jpg",
-            "/aboutpage/5.jpg",
-            "/aboutpage/6.jpg",
-            "/aboutpage/7.jpg",
-            "/aboutpage/8.jpg",
-            "/aboutpage/9.jpg",
-            "/aboutpage/10.jpg",
-          ]}
+          images={projectCovers}
           baseVelocity={10}
           height={200}
         />
