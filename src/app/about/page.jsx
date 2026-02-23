@@ -92,8 +92,8 @@ const about = () => {
         />
       </div>
 
-      <div className="py-24 max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row px-2 md:px-24 md:gap-10">
-        <p className="font-montserrat text-left">
+      <div className="py-24 w-full max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row px-2 md:px-24 md:gap-10 justify-between">
+        <p className="font-montserrat text-left max-w-2xl">
           Alongside her creative practice, Keya is a passionate educator and
           mentor. She teaches documentary filmmaking and design, conducting
           workshops across colleges and creative institutions to nurture
