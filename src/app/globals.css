@@ -52,13 +52,3 @@ li.active {
 span.active {
   @apply opacity-100;
 }
-
-/* .marquee-mask {
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 5%,
-    black 95%,
-    transparent
-  );
-} */

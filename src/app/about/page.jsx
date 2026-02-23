@@ -95,10 +95,36 @@ const about = () => {
             "/aboutpage/8.jpg",
             "/aboutpage/9.jpg",
             "/aboutpage/10.jpg",
+            "/aboutpage/1.jpg",
+            "/aboutpage/2.jpg",
+            "/aboutpage/3.jpg",
+            "/aboutpage/4.jpg",
+            "/aboutpage/5.jpg",
+            "/aboutpage/6.jpg",
+            "/aboutpage/7.jpg",
+            "/aboutpage/8.jpg",
+            "/aboutpage/9.jpg",
+            "/aboutpage/10.jpg",
           ]}
           baseVelocity={10}
           height={200}
         />
+      </div>
+
+      <div className="py-24 max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row px-2 md:px-24 md:gap-10">
+        <p className="font-montserrat text-left">
+          Alongside her creative practice, Keya is a passionate educator and
+          mentor. She teaches documentary filmmaking and design, conducting
+          workshops across colleges and creative institutions to nurture
+          emerging storytellers. She has taught at esteemed institutes such as
+          Film and Television Institute of India (FTII), among many others. Her
+          teaching approach blends craft with consciousness—encouraging students
+          not only to master cinematic language but to cultivate empathy,
+          awareness, and authenticity in their work.
+        </p>
+        <h1 className="text-3xl font-bold mb-6 md:text-right">
+          Teaching & Mentorship
+        </h1>
       </div>
 
       <FullscreenImage />

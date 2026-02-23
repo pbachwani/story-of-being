@@ -59,7 +59,7 @@ const Navbar = () => {
           </AnimatedLink>
         </div>
       </motion.nav>
-      <div className="md:hidden w-full h-full absolute z-50 top-0 right-0">
+      <div className="md:hidden w-fit h-fit absolute z-50 top-0 right-0">
         {/* replace with hamburger menu later */}
         {/* <HamburgerComponent /> */}
         <MotionDrawer

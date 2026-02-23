@@ -248,3 +248,136 @@ export const projects = [
     cover: "/project-covers/Tazia.jpg",
   },
 ];
+
+export const media = {
+  videos: [
+    {
+      title: "Jungle Bells",
+      youtubeId: "z5RbDi2j_pU",
+    },
+    {
+      title: "Her Kahani",
+      youtubeId: "He7zFteIOr8",
+    },
+    {
+      title: "The Solopreneurs – Part 1",
+      youtubeId: "OCwxv9l6Br4",
+    },
+    {
+      title: "The Solopreneurs – Part 2",
+      youtubeId: "zkQ8k4ur9DQ",
+    },
+    {
+      title: "Forbes",
+      youtubeId: "lxMJ3o-Ttao",
+    },
+    {
+      title: "TEDx",
+      youtubeId: "y1AGQ6SzI0Q",
+    },
+    {
+      title: "AND Academy",
+      youtubeId: "EczNb2iMHbw",
+    },
+  ],
+
+  podcasts: [
+    {
+      title: "TGL Studios",
+      youtubeId: "dDhl-eIsUHE",
+    },
+    {
+      title: "Unraveling Crafts",
+      youtubeId: "Y5YPsF2Q1Lc",
+    },
+  ],
+
+  shorts: [
+    {
+      youtubeId: "xP6gTEZbzxY",
+    },
+    {
+      youtubeId: "vYlTrwUTZiY",
+    },
+    {
+      youtubeId: "ug375q46TXM",
+    },
+    {
+      youtubeId: "LXEYg0i-9xQ",
+    },
+  ],
+
+  articles: [
+    {
+      source: "Forbes",
+      title: "Keya Vaswani and Nidhi Kamath weaving their magic on screen",
+      link: "https://www.forbesindia.com/article/2019-wpower-trailblazers/keya-vaswani-and-nidhi-kamath-weaving-their-magic-on-screen/52707/1",
+    },
+    {
+      source: "Times of India",
+      title: "City filmmaker wins award for film on handloom industry",
+      link: "https://timesofindia.indiatimes.com/city/raipur/city-film-maker-wins-award-for-film-on-handloom-industry/articleshow/52338915.cms",
+    },
+    {
+      source: "The Indian Express",
+      title: "Retelling India’s textile stories",
+      link: "https://www.newindianexpress.com/cities/bengaluru/2016/Jun/19/retelling-indias-textile-stories-941888.html",
+    },
+    {
+      source: "Better India",
+      title: "Watch intricate Indian craft unfold",
+      link: "https://www.thebetterindia.com/41764/video-watch-see-intricate-indian-craft-unfold-right-front-eyes/",
+    },
+    {
+      source: "Live Mint",
+      title: "Weavers in the studio",
+      link: "https://www.livemint.com/Leisure/cDZVyPCGl3UOxB0tguUlDJ/Weavers-in-the-studio.html",
+    },
+    {
+      source: "Business Standard",
+      title: "Crafted with love",
+      link: "https://www.business-standard.com/article/specials/crafted-with-love-116090901266_1.html",
+    },
+    {
+      source: "Verve",
+      title: "Behind the lens with Storyloom",
+      link: "https://www.vervemagazine.in/tag/behind-the-lens-with-storyloom",
+    },
+    {
+      source: "The News Minute",
+      title: "Weaving stories on the loom",
+      link: "https://www.thenewsminute.com/features/weaving-stories-loom-how-two-women-are-giving-artisans-voice-through-films-45436",
+    },
+    {
+      source: "News18",
+      title:
+        "Two women filmmakers are giving Make in India a traditional twist",
+      link: "https://www.news18.com/news/buzz/two-women-filmmakers-are-giving-modis-make-in-india-a-traditional-twist-with-their-eye-opening-documentaries-1182758.html",
+    },
+    {
+      source: "The Sindhians",
+      title: "Keya Vaswani feature",
+      link: "https://www.bindugopalrao.com/the-sindhian-stories-apr-jun-2019/keya-vaswani/",
+    },
+    {
+      source: "Flextiles",
+      title: "Jaipur features",
+      link: "https://flextiles.wordpress.com/tag/jaipur/",
+    },
+    {
+      source: "Educate Girls",
+      title: "Celebrating women trailblazers",
+      link: "https://www.educategirls.ngo/blog/celebrating-women-trailblazers-women-who-have-created-their-own-path-and-paved-way-for-others/",
+    },
+    {
+      source: "ARCH College",
+      title: "Event feature",
+      link: "https://www.archedu.org/events-details.html?event_id=347",
+    },
+    {
+      source: "Young INTACH Explorer",
+      title: "Heritage alerts feature",
+      link: "https://www.youngintach.org/heritage-alerts-june16",
+    },
+  ],
+};

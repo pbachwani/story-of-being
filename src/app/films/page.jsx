@@ -1,85 +1,157 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../constants/data";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 
 const Films = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  // get unique categories
+  const categories = ["All", ...new Set(projects.map((p) => p.category))];
+
+  const filteredProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
+
+  // reset hover when filter changes (important)
+  useEffect(() => {
+    setHoveredIndex(null);
+  }, [activeFilter]);
 
   return (
-    <main className="h-full min-h-screen w-screen py-24 px-2 md:px-12 overflow-x-clip mx-auto">
+    <main className="h-full min-h-screen w-screen py-24 px-2 md:px-12 overflow-x-clip mx-auto bg-background">
       <div className="max-w-[1440px] mx-auto">
         <div className="w-full flex flex-col">
-          <div className="w-full flex justify-between items-end">
-            <h1 className="w-full text-4xl lg:text-7xl font-abril mt-10">
+          {/* HEADER */}
+          <div className="w-full flex flex-col lg:flex-row md:justify-between md:items-end gap-6">
+            <h1 className="w-full flex-1 text-4xl lg:text-7xl font-abril">
               Films
             </h1>
-            <div>filters</div>
+
+            {/* FILTERS */}
+            <div className="flex flex-wrap w-full lg:justify-end items-center gap-2 md:gap-3">
+              {categories.map((cat) => {
+                const isActive = activeFilter === cat;
+
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveFilter(cat)}
+                    className="relative px-4 py-1.5 text-sm md:text-base font-medium rounded-full transition-all duration-300"
+                  >
+                    {/* ACTIVE PILL (shared layout animation) */}
+                    {isActive && (
+                      <motion.span
+                        layoutId="filter-pill"
+                        className="absolute inset-0 bg-black rounded-full"
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+
+                    {/* LABEL */}
+                    <span
+                      className={`relative z-10 transition-colors duration-300 ${
+                        isActive
+                          ? "text-white"
+                          : "text-gray-500 hover:text-black"
+                      }`}
+                    >
+                      {cat}
+                    </span>
+
+                    {/* BORDER */}
+                    <span className="absolute inset-0 rounded-full border border-gray-900" />
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 mt-28">
-            {projects?.map((film, index) => {
-              const isHovered = hoveredIndex === index;
+          {/* GRID */}
+          <motion.div
+            layout
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 mt-20"
+          >
+            <AnimatePresence mode="sync">
+              {filteredProjects.map((film, index) => {
+                const isHovered = hoveredIndex === index;
 
-              return (
-                <div key={index}>
-                  <Link href={film.link} target="_">
-                    <div
-                      className="relative overflow-hidden cursor-pointer"
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                      onTouchStart={() => setHoveredIndex(index)}
-                      onTouchEnd={() => setHoveredIndex(null)}
-                    >
-                      {/* IMAGE */}
-                      <motion.img
-                        animate={{
-                          scale: isHovered ? 1.05 : 1,
-                        }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                        src={film.cover}
-                        alt=""
-                        className="object-cover w-full h-full transition-transform duration-500 ease-out hover:scale-105"
-                      />
+                return (
+                  <motion.div
+                    key={film.name}
+                    layout
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    transition={{ duration: 0.35, ease: "easeOut" }}
+                  >
+                    <Link href={film.link} target="_">
+                      <div
+                        className="relative overflow-hidden cursor-pointer"
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                        onTouchStart={() => setHoveredIndex(index)}
+                        onTouchEnd={() => setHoveredIndex(null)}
+                      >
+                        {/* IMAGE */}
+                        <motion.img
+                          animate={{
+                            scale: isHovered ? 1.06 : 1,
+                          }}
+                          transition={{ duration: 0.4, ease: "easeOut" }}
+                          src={film.cover}
+                          alt=""
+                          className="object-cover w-full h-full"
+                        />
 
-                      {/* OVERLAY */}
-                      <div className="absolute inset-0 bg-black/20 flex items-end">
-                        <div className="p-3 w-full overflow-hidden">
-                          {/* TEXT WRAPPER */}
-                          <motion.div
-                            animate={{
-                              height: isHovered ? "auto" : 28, // controls expansion
-                            }}
-                            transition={{ duration: 0.4, ease: "easeOut" }}
-                            className="overflow-hidden"
-                          >
-                            {/* TITLE (fixed position) */}
-                            <p className="font-raleway text-white text-xl font-semibold leading-tight">
-                              {film.name}
-                            </p>
+                        {/* OVERLAY */}
+                        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black to-transparent from-0% to-50%">
+                          {/* gradient instead of flat overlay */}
+                          <div className="absolute inset-0 " />
 
-                            {/* LOGLINE */}
-                            <motion.p
-                              initial={false}
+                          <div className="relative p-3 w-full overflow-hidden">
+                            {/* TEXT WRAPPER */}
+                            <motion.div
                               animate={{
-                                opacity: isHovered ? 1 : 0,
-                                y: isHovered ? 0 : 10,
+                                height: isHovered ? "auto" : 28,
                               }}
                               transition={{ duration: 0.4, ease: "easeOut" }}
-                              className="font-raleway text-white text-sm mt-1"
+                              className="overflow-hidden"
                             >
-                              {film.logline}
-                            </motion.p>
-                          </motion.div>
+                              {/* TITLE */}
+                              <p className="font-raleway text-white md:text-xl font-semibold leading-tight">
+                                {film.name}
+                              </p>
+
+                              {/* LOGLINE */}
+                              <motion.p
+                                initial={false}
+                                animate={{
+                                  opacity: isHovered ? 1 : 0,
+                                  y: isHovered ? 0 : 12,
+                                }}
+                                transition={{ duration: 0.4, ease: "easeOut" }}
+                                className="font-raleway text-white text-sm mt-1"
+                              >
+                                {film.logline}
+                              </motion.p>
+                            </motion.div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                </div>
-              );
-            })}
-          </div>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
+          </motion.div>
         </div>
       </div>
     </main>
