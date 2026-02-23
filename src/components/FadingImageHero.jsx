@@ -3,7 +3,11 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-export default function FadingImageHero({ images = [], interval = 4000 }) {
+export default function FadingImageHero({
+  images = [],
+  interval = 4000,
+  className,
+}) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export default function FadingImageHero({ images = [], interval = 4000 }) {
   }, [images.length, interval]);
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className={`relative w-full h-full overflow-hidden`}>
       {/* Base image (always visible) */}
       <img
         src={images[index]}

@@ -4,13 +4,14 @@ import { motion } from "motion/react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import FadingImageHero from "@/components/FadingImageHero";
 gsap.registerPlugin(ScrollTrigger);
 
 const telepathy = () => {
   return (
     <main className="w-full min-h-screen bg-[#FFFAED]">
       {/* top */}
-      <div className="h-[70vh] z-30 flex flex-col justify-center items-center relative text-white">
+      <div className="h-[90vh] z-30 flex flex-col justify-center items-center relative text-white">
         <img
           src="/telepathy/1.jpg"
           alt="cover image"
@@ -29,7 +30,7 @@ const telepathy = () => {
         </p>
       </div>
 
-      <section className="h-[40vh] relative">
+      <section className="h-[20vh] relative">
         <div className="text-5xl md:text-9xl absolute left-1/2  -bottom-4 md:-bottom-20 lg:-bottom-16 z-20 text-white font-black mix-blend-difference flex flex-col">
           {/* <h1 className="w-full">Who I Am</h1> */}
         </div>
@@ -44,6 +45,17 @@ const telepathy = () => {
           alt="double height image"
           className="absolute w-full h-full inset-0 object-cover z-0"
         />
+        {/* <motion.div
+          initial={{ scale: 0.8, borderRadius: "100px" }}
+          whileInView={{ scale: 1, borderRadius: "0px" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute w-full h-full inset-0 object-cover z-0"
+        >
+          <FadingImageHero
+            images={["/aboutpage/13.jpg", "/aboutpage/12.jpg"]}
+          />
+        </motion.div> */}
+
         <div className="relative z-10 w-full h-full flex flex-col justify-end py-12 items-center">
           {/* row 1 */}
           <div className="flex">
@@ -51,9 +63,9 @@ const telepathy = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-md h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
+              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-xl h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
             >
-              <h1 className="text-3xl md:text-7xl text-white font-black mix-blend-difference font-boska">
+              <h1 className="text-3xl md:text-5xl text-white font-black mix-blend-difference font-boska">
                 Who Am I
               </h1>
               <p>
@@ -75,9 +87,9 @@ const telepathy = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-md h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
+              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-xl h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
             >
-              <h1 className="text-3xl md:text-7xl text-white font-black mix-blend-difference">
+              <h1 className="text-3xl md:text-5xl text-white font-black mix-blend-difference font-boska">
                 How It Works
               </h1>
               <p>
@@ -101,9 +113,9 @@ const telepathy = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
-              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-md h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
+              className="flex flex-col gap-4 font-montserrat mt-20 md:w-1/2 w-full text-black backdrop-blur-xl h-fit rounded-xl p-4 mx-4 md:p-10 text-lg font-medium"
             >
-              <h1 className="text-3xl md:text-7xl text-white font-black mix-blend-difference">
+              <h1 className="text-3xl md:text-5xl text-white font-black mix-blend-difference font-boska">
                 Why Connect This Way?
               </h1>
               <p>
