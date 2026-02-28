@@ -58,11 +58,13 @@ const Featured = () => {
             </p>
           </div>
           <div className="md:w-1/2 w-full flex flex-col">
-            <img
-              src="/featured/3.png"
-              alt="first"
-              className="w-full h-full max-h-80 aspect-video object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
-            />
+            <div className="aspect-video">
+              <img
+                src="/featured/3.png"
+                alt="first"
+                className="w-full h-full max-h-80 aspect-video object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
+              />
+            </div>
 
             <div className="w-full flex justify-between items-end">
               <h2 className="mt-8 font-extrabold text-2xl">
@@ -83,11 +85,13 @@ const Featured = () => {
         {/* row 3 */}
         <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
           <div className="md:w-1/2 w-full flex flex-col">
-            <img
-              src="/featured/4.png"
-              alt="first"
-              className="w-full h-full max-h-80 object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
-            />
+            <div className="aspect-video">
+              <img
+                src="/featured/4.png"
+                alt="first"
+                className="w-full h-full aspect-video max-h-80 object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
+              />
+            </div>
             <div className="w-full flex justify-between items-end">
               <h2 className="mt-8 font-extrabold text-2xl">The Dawn</h2>
               <a href="https://youtu.be/fPFUAYUP7hw" target="_">
