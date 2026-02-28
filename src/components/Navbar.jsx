@@ -11,6 +11,7 @@ import AnimatedLink from "./AnimatedLink";
 const Navbar = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +34,10 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4, delay: 1 }}
         className={clsx(
           "fixed top-0 left-0 z-50 w-screen h-24 flex justify-center items-center font-semibold transition-transform duration-500 ease-out",
           show ? "translate-y-0" : "-translate-y-full",
@@ -60,33 +65,69 @@ const Navbar = () => {
         </div>
       </motion.nav>
       <div className="md:hidden w-fit h-fit absolute z-50 top-0 right-0">
-        {/* replace with hamburger menu later */}
-        {/* <HamburgerComponent /> */}
         <MotionDrawer
           direction="right"
           buttonOpeningVariants="stay"
           width={300}
           className="text-black"
+          isOpen={isOpen}
+          onToggle={setIsOpen}
         >
-          <nav className="space-y-4 overflow-x-hidden font-montserrat text-4xl font-medium">
-            <a href="/" className="block p-2">
+          <nav className="space-y-4 overflow-x-hidden font-montserrat text-xl font-medium">
+            <Link
+              href="/"
+              className="block "
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               Home
-            </a>
-            <a href="/about" className="block p-2">
+            </Link>
+            <Link
+              href="/about"
+              className="block"
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               About
-            </a>
-            <a href="/films" className="block p-2">
+            </Link>
+            <Link
+              href="/films"
+              className="block "
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               Films
-            </a>
-            <a href="/telepathy" className="block p-2">
+            </Link>
+            <Link
+              href="/telepathy"
+              className="block "
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               Telepathy
-            </a>
-            <a href="/media" className="block p-2">
+            </Link>
+            <Link
+              href="/media"
+              className="block "
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               Media
-            </a>
-            <a href="/#contact" className="block p-2">
+            </Link>
+            <Link
+              href="/#contact"
+              className="block "
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
               Contact
-            </a>
+            </Link>
           </nav>
         </MotionDrawer>
       </div>

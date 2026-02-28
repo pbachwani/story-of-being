@@ -12,7 +12,7 @@ export const projects = [
     client: "The Nudge Institute",
     category: "Environmental",
     link: "https://www.youtube.com/watch?v=8J59WBTqX6U",
-    logline: `"To Turn a Tide" tracks defiant farmers and grassroots innovators battling back with clever water hacks, unbreakable grit, and united resolve.`,
+    logline: `To Turn a Tide" tracks defiant farmers and grassroots innovators battling back with clever water hacks, unbreakable grit, and united resolve.`,
     cover: "/project-covers/To turn a tide.jpg",
   },
   {
@@ -381,3 +381,22 @@ export const media = {
     },
   ],
 };
+
+export const brandLogos = [
+  "/brand-logos/1.png",
+  "/brand-logos/2.png",
+  "/brand-logos/3.png",
+  "/brand-logos/4.png",
+  "/brand-logos/5.png",
+  "/brand-logos/6.png",
+  "/brand-logos/7.png",
+  "/brand-logos/8.png",
+  "/brand-logos/9.png",
+  "/brand-logos/10.png",
+  "/brand-logos/11.png",
+  "/brand-logos/12.png",
+  "/brand-logos/13.png",
+  "/brand-logos/14.png",
+  "/brand-logos/15.png",
+  "/brand-logos/16.png",
+];

@@ -6,6 +6,7 @@ import React, { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import AnimatedLink from "@/components/AnimatedLink";
+import { motion } from "motion/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,9 +18,9 @@ const Hero = () => {
       gsap.to(contentRef.current, {
         opacity: 0,
         scrollTrigger: {
-          trigger: contentRef.current,
+          trigger: document.body,
           start: "top top",
-          end: "bottom 20%",
+          end: "+=500",
           scrub: true,
         },
       });
@@ -42,13 +43,19 @@ const Hero = () => {
         ref={contentRef}
         className="absolute top-0 left-0 w-full h-full min-h-screen flex flex-col justify-center items-center text-white bg-black/20 max-md:flex-col"
       >
-        <div className="flex flex-col md:flex-row justify-center items-center w-full max-w-7xl gap-10">
+        <div className="flex flex-col md:flex-row justify-center items-center h-full w-full max-w-7xl gap-2 max-md:pb-14">
           {/* left col */}
-          <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-4xl font-bold">
-              <AnimatedLink href="/films">Films</AnimatedLink>
+          <div className="w-full flex flex-col justify-center items-center gap-2 h-fit hover:cursor-pointer">
+            <h1 className="md:text-3xl text-xl font-bold hover:scale-110 transition-all duration-300 ease-out">
+              <AnimatedLink
+                href="/films"
+                className="max-md:underline underline-offset-5"
+              >
+                Films
+              </AnimatedLink>
             </h1>
-            <p className="text-center md:px-4">
+            {/* <span className="w-full mx-20 h-px border-t border-white" /> */}
+            <p className="text-center md:px-4 px-16 max-md:text-sm ">
               Explore cinematic projects, storytelling, and films.
             </p>
           </div>
@@ -64,26 +71,31 @@ const Hero = () => {
             </p>
           </div>
           {/* right col */}
-          <div className="w-full flex flex-col justify-center items-center gap-4 h-full hover:cursor-pointer">
-            <h1 className="text-4xl font-bold">
-              <AnimatedLink href="/telepathy">Telepathy</AnimatedLink>
+          <div className="w-full flex flex-col justify-center items-center gap-2 h-fit hover:cursor-pointer">
+            <h1 className="md:text-3xl text-xl font-bold hover:scale-110 transition-all duration-300 ease-out">
+              <AnimatedLink
+                href="/telepathy"
+                className="max-md:underline underline-offset-5"
+              >
+                Telepathy
+              </AnimatedLink>
             </h1>
-            <p className="text-center md:px-4">
+            <p className="text-center md:px-4 px-16 max-md:text-sm">
               Discover sessions and insights on connecting deeply with animals &
               Nature.
             </p>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
-        <div className="w-fit px-8">
+      <div className="absolute md:bottom-6 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
+        <div className="w-fit px-4">
           <p className="text-nowrap">Two worlds</p>
         </div>
-        <div className="w-full border-b">
+        <div className="w-full border-b border-white/50">
           {/* <ChevronDown size={48} className="" /> */}
           {/* <span className="border-b border-white w-full" /> */}
         </div>
-        <div className="w-fit px-8">
+        <div className="w-fit px-4">
           <p className="text-nowrap">One journey</p>
         </div>
       </div>

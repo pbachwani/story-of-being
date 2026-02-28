@@ -18,7 +18,7 @@ const Contact = () => {
     e.preventDefault();
     setSubmitting(true);
     const url =
-      "https://script.google.com/macros/s/AKfycby8Fit0wD3YKZlQJUx7AjnD01jkecJAKcYsebnd8Y3G0VqBVzYZJnL5dUy5EMQrDVRr/exec";
+      "https://script.google.com/macros/s/AKfycbx01ZdIs2xe-Fwf13tRVM1jFw1PnpUs8L5wK0VwBNFTFGaSLgen-prm74lDgOYKZa8/exec";
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -43,7 +43,7 @@ const Contact = () => {
       <div className="md:py-20 py-10 text-white max-w-[1440px] mx-auto flex flex-col md:gap-16 gap-8">
         {/* HEADER */}
         <div className="flex flex-col gap-2">
-          <h1 className="font-abril text-4xl md:text-6xl">Contact</h1>
+          <h1 className="font-abril text-2xl md:text-4xl">Contact</h1>
         </div>
 
         {/* CONTENT */}

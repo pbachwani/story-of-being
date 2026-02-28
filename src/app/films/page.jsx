@@ -77,7 +77,7 @@ const Films = () => {
           {/* GRID */}
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 mt-20"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4 mt-8"
           >
             <AnimatePresence mode="sync">
               {filteredProjects.map((film, index) => {

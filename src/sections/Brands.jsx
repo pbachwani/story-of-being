@@ -20,6 +20,7 @@ import pangaia from "@/../public/brands/PANGAIA_Logo.png";
 import Pari from "@/../public/brands/Pari Logo.png";
 import Rahul from "@/../public/brands/Rahul Mishra.png";
 import Sarmaya from "@/../public/brands/Sarmaya-Logo.png";
+import { brandLogos } from "@/app/constants/data";
 
 const logos = [
   { name: "Aavran", image: aavran },
@@ -50,7 +51,7 @@ const Brands = () => {
         <div className="py-10">
           <Image src={line} alt="top line" className="mx-auto mt-2" />
 
-          <div className="py-0 flex overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="py-0 flex overflow-hidden mt-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <motion.div
               animate={{ x: "-50%" }}
               transition={{
@@ -58,16 +59,16 @@ const Brands = () => {
                 ease: "linear",
                 repeat: Infinity,
               }}
-              className="flex flex-none gap-24 pr-24"
+              className="flex flex-none gap-16 pr-16"
             >
               {Array.from({ length: 2 }).map((_, i) => (
                 <React.Fragment key={i}>
-                  {logos.map((logo) => (
-                    <Image
-                      src={logo.image}
-                      key={logo.name}
-                      alt={logo.name}
-                      height={60}
+                  {brandLogos.map((logo, i) => (
+                    <img
+                      src={logo}
+                      key={i}
+                      alt={logo}
+                      className="w-fit md:h-36 h-20"
                     />
                   ))}
                 </React.Fragment>
@@ -75,7 +76,7 @@ const Brands = () => {
               {/* <Image src={aavran} alt="AAvran logo" width={100} /> */}
             </motion.div>
           </div>
-          <Image src={line} alt="bottom line" className="mx-auto mt-10" />
+          <Image src={line} alt="bottom line" className="mx-auto mt-4" />
         </div>
       </div>
     </section>

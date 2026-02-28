@@ -6,7 +6,7 @@ import { media } from "../constants/data";
 
 const MediaPage = () => {
   return (
-    <main className="w-full min-h-screen px-4 md:px-16 py-24">
+    <main className="w-full min-h-screen px-4 md:px-16 py-24 bg-background">
       <div className="max-w-[1440px] mx-auto">
         {/* ================= HEADER ================= */}
         <div className="mb-16">
@@ -14,8 +14,8 @@ const MediaPage = () => {
         </div>
 
         {/* ================= DIGITAL ================= */}
-        <section className="mb-28">
-          <h2 className="text-2xl md:text-4xl mb-8 font-abril">Digital</h2>
+        <section className="mb-10">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-4">Digital</h2>
 
           {/* ===== VIDEOS GRID ===== */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -64,8 +64,10 @@ const MediaPage = () => {
           </div>
 
           {/* ===== PODCASTS ===== */}
-          <div className="mt-16">
-            <h3 className="text-xl md:text-2xl mb-6 font-abril">Podcasts</h3>
+          <div className="mt-10">
+            <h3 className="text-2xl md:text-4xl font-semibold mb-4">
+              Podcasts
+            </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {media.podcasts.map((video, i) => {
@@ -110,8 +112,10 @@ const MediaPage = () => {
 
           {/* ===== SHORTS ===== */}
           {media.shorts?.length > 0 && (
-            <div className="mt-16">
-              <h3 className="text-xl md:text-2xl mb-6 font-abril">Shorts</h3>
+            <div className="mt-10">
+              <h3 className="text-2xl md:text-4xl font-semibold mb-4">
+                Shorts
+              </h3>
 
               <div className="flex gap-4 overflow-x-auto pb-4">
                 {media.shorts.map((video, i) => {
@@ -137,13 +141,21 @@ const MediaPage = () => {
                   );
                 })}
               </div>
+              <p className="text-end md:hidden text-xs">
+                scroll{" "}
+                <img
+                  src="/arrow-right.png"
+                  alt="right arrow"
+                  className="w-4 h-4 inline-block"
+                />
+              </p>
             </div>
           )}
         </section>
 
         {/* ================= PRINT ================= */}
-        <section className="mt-32">
-          <h2 className="text-2xl md:text-4xl mb-12 font-abril">Print</h2>
+        <section className="mt-4">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-0">Print</h2>
 
           <div className="flex flex-col">
             {media.articles.map((article, i) => (
@@ -165,7 +177,7 @@ const MediaPage = () => {
                 <div className="flex justify-between items-start md:items-center gap-6 font-montserrat">
                   <div className="flex flex-col md:flex-row md:items-center md:gap-20 w-full transition-all duration-300 ease-out group-hover:translate-x-2">
                     {/* SOURCE */}
-                    <span className="text-gray-400 text-sm uppercase tracking-wide min-w-[200px]">
+                    <span className="text-gray-400 group-hover:text-black group-hover:font-bold text-sm uppercase tracking-wide min-w-[200px]">
                       {article.source}
                     </span>
 
@@ -179,8 +191,8 @@ const MediaPage = () => {
                   </div>
 
                   {/* ARROW */}
-                  <span className="text-black text-lg transform translate-x-[-8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                    ↗
+                  <span className="text-black text-lg transform translate-x-[-8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 max-md:opacity-100 max-md:translate-x-0">
+                    <img src="/arrow-right.png" alt="" className="w-5 h-5" />
                   </span>
                 </div>
 

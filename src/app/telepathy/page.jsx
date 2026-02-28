@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const telepathy = () => {
   return (
-    <main className="w-full min-h-screen bg-[#FFFAED]">
+    <main className="w-full min-h-screen bg-background">
       {/* top */}
       <div className="h-[90vh] z-30 flex flex-col justify-center items-center relative text-white">
         <img

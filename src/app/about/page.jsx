@@ -8,9 +8,9 @@ import { projects } from "../constants/data";
 const about = () => {
   const projectCovers = projects?.map((project) => project.cover);
   return (
-    <main className="w-full h-full min-h-screen overflow-x-clip">
+    <main className="w-full h-full min-h-screen overflow-x-clip bg-background">
       {/* <Slider /> */}
-      <div className="flex items-center justify-center relative h-[600px]">
+      <div className="flex items-center justify-center relative h-[70vh]">
         <div className="absolute top-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4 z-10">
           <h2 className="text-white font-boska font-extrabold text-4xl md:text-6xl">
             Story of Being
@@ -52,6 +52,7 @@ const about = () => {
           />
         </div>
         <div className="md:w-2/3 flex flex-col gap-4 font-montserrat">
+          {/* <h1 className="font-bold text-xl">About Keya Vaswani</h1> */}
           <h3>
             Keya Vaswani is a{" "}
             <span className="font-bold">
@@ -81,6 +82,17 @@ const about = () => {
             sessions—to inspire awareness, empathy, and harmony across people,
             animals, and nature.
           </p>
+          <h1 className="font-bold text-xl mt-4">Teaching and Mentorship</h1>
+          <p>
+            Alongside her creative practice, Keya is a passionate educator and
+            mentor. She teaches documentary filmmaking and design, conducting
+            workshops across colleges and creative institutions to nurture
+            emerging storytellers. She has taught at esteemed institutes such as
+            Film and Television Institute of India (FTII), among many others.
+            Her teaching approach blends craft with consciousness—encouraging
+            students not only to master cinematic language but to cultivate
+            empathy, awareness, and authenticity in their work.
+          </p>
         </div>
       </div>
 
@@ -92,7 +104,7 @@ const about = () => {
         />
       </div>
 
-      <div className="py-24 w-full max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row px-2 md:px-24 md:gap-10 justify-between">
+      {/* <div className="py-24 w-full max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row px-2 md:px-24 md:gap-10 justify-between">
         <p className="font-montserrat text-left max-w-2xl">
           Alongside her creative practice, Keya is a passionate educator and
           mentor. She teaches documentary filmmaking and design, conducting
@@ -106,7 +118,7 @@ const about = () => {
         <h1 className="text-3xl font-bold mb-6 md:text-right">
           Teaching & Mentorship
         </h1>
-      </div>
+      </div> */}
 
       <FullscreenImage />
     </main>
