@@ -112,7 +112,7 @@ const Contact = () => {
               </div>
 
               <a
-                href="https://calendly.com/YOUR-LINK"
+                href="https://calendly.com/keya-vaswani/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-between w-fit px-2 hover:px-6 py-3 rounded-full bg-none text-white hover:text-black text-sm md:text-base transition-all duration-300 hover:bg-white/90"
