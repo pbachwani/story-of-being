@@ -12,7 +12,7 @@ export default function FullscreenImage() {
     offset: ["start 75%", "end 100%"],
   });
 
-  const width = useTransform(scrollYProgress, [0, 1], ["85%", "100%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], ["80%", "100%"]);
   const height = useTransform(scrollYProgress, [0, 1], ["80vh", "100vh"]);
   const borderRadius = useTransform(scrollYProgress, [0, 1], ["32px", "0px"]);
 
@@ -22,8 +22,8 @@ export default function FullscreenImage() {
       className="h-screen flex items-center justify-center mt-24 relative overflow-y-scroll"
     >
       <motion.div
-        style={{ width, height, borderRadius }}
-        className="overflow-hidden relative"
+        style={{ scale, height, borderRadius }}
+        className="overflow-hidden relative w-screen"
       >
         <img
           src="/aboutpage/8.jpg"

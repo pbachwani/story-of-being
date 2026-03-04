@@ -16,20 +16,25 @@ const Featured = () => {
             alt="first"
             className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
           />
-          <Link
-            href={"https://youtu.be/f_t1mHjxaNw"}
-            target="_"
+          <div
+            // href={"https://www.youtube.com/watch?v=8J59WBTqX6U"}
+            // target="_"
             className="flex flex-col md:flex-row w-full md:gap-10 gap-4 mt-10"
           >
-            <h2 className="md:w-1/2 md:text-start font-extrabold text-2xl">
-              To Turn a Tide
-            </h2>
+            <div className="w-full md:w-1/2 flex justify-between items-end">
+              <h2 className=" md:text-start font-extrabold text-2xl">
+                To Turn a Tide
+              </h2>
+              <a href="https://www.youtube.com/watch?v=8J59WBTqX6U" target="_">
+                <ChevronRight size={32} />
+              </a>
+            </div>
             <p className="md:w-1/2 font-montserrat text-justify leading-tight">
               To Turn a Tide" tracks defiant farmers and grassroots innovators
               battling back with clever water hacks, unbreakable grit, and
               united resolve.
             </p>
-          </Link>
+          </div>
         </div>
         {/* row 2 */}
         <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10 mt-10">
