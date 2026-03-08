@@ -64,11 +64,18 @@ const Brands = () => {
               {Array.from({ length: 2 }).map((_, i) => (
                 <React.Fragment key={i}>
                   {brandLogos.map((logo, i) => (
-                    <img
+                    <motion.img
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.6,
+                        delay: i * 0.08, // 👈 stagger delay
+                        ease: "easeOut",
+                      }}
                       src={logo}
                       key={i}
                       alt={logo}
-                      className="w-fit md:h-36 h-20"
+                      className="w-auto md:h-36 h-24"
                     />
                   ))}
                 </React.Fragment>

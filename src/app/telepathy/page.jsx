@@ -6,6 +6,9 @@ import { ScrollTrigger } from "gsap/all";
 import FullscreenImage from "@/components/FullscreenImage";
 gsap.registerPlugin(ScrollTrigger);
 
+import { motion } from "motion/react";
+import Contact from "@/sections/Contact";
+
 const telepathySections = [
   {
     title: "Who I Am",
@@ -62,27 +65,64 @@ const Telepathy = () => {
       {/* top */}
       <div className="h-[70vh] z-30 flex flex-col justify-center items-center relative text-white">
         <img
+          // initial={{ height: 0 }}
+          // animate={{ height: "70vh" }}
+          // transition={{ delay: 0.2, duration: 0.3, ease: "easeInOut" }}
           src="/telepathy/1.jpg"
           alt="cover image"
           className="absolute inset-0 object-cover w-full h-full -z-10"
         />
-        <h1 className="font-boska font-black text-3xl mt-10 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.08, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="font-boska font-black text-3xl mt-10 text-center"
+        >
           Telepathic Communication
-        </h1>
-        <p className="font-boska font-bold text-xl">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.1, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="font-boska font-bold text-xl"
+        >
           Connecting Hearts Beyond Words
-        </p>
-        <p className="font-montserrat text-white font-semibold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full mt-10">
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.12, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="font-montserrat text-white font-semibold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full mt-10"
+        >
           Welcome to the Telepathic Communication experience—a unique path to
           deepen your connection with your beloved pets, plant companions, and
           the natural world around you.
-        </p>
+        </motion.p>
       </div>
 
       <section className="w-full px-4 md:px-16 py-24 bg-background">
         <div className="grid lg:grid-cols-3 max-w-7xl mx-auto">
           {telepathySections.map((section, i) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.1, // 👈 stagger delay
+                ease: "easeOut",
+              }}
               key={i}
               className="flex flex-col justify-start px-4 py-4 gap-4"
             >
@@ -95,7 +135,7 @@ const Telepathy = () => {
               <p className="leading-relaxed text-base md:text-lg h-full">
                 {section.content}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -103,18 +143,43 @@ const Telepathy = () => {
         <div className="max-w-6xl mx-auto flex flex-col mt-20">
           {/* Section Heading */}
           <div className="text-center max-w-2xl mx-auto">
-            <p className="uppercase tracking-widest text-sm mb-4 opacity-60">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.08, // 👈 stagger delay
+                ease: "easeOut",
+              }}
+              className="uppercase tracking-widest text-sm mb-4 opacity-60"
+            >
               Testimonials
-            </p>
-            <h2 className="text-3xl md:text-5xl font-abril font-bold">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1, // 👈 stagger delay
+                ease: "easeOut",
+              }}
+              className="text-3xl md:text-5xl font-abril font-bold"
+            >
               Words From Beautiful Souls
-            </h2>
+            </motion.h2>
           </div>
 
           {/* Testimonials Grid */}
           <div className="grid md:grid-cols-2 gap-10 mt-10">
             {testimonials.map((t, i) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.08, // 👈 stagger delay
+                  ease: "easeOut",
+                }}
                 key={i}
                 className="flex flex-col gap-8 p-8 md:p-10 bg-[#98c867]/20 rounded-2xl shadow-sm"
               >
@@ -141,7 +206,7 @@ const Telepathy = () => {
                     <p key={idx}>{p}</p>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -87,10 +87,14 @@ const Films = () => {
                   <motion.div
                     key={film.name}
                     layout
-                    initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.96 }}
-                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.04, // 👈 stagger delay
+                      ease: "easeOut",
+                    }}
                   >
                     <Link href={film.link} target="_">
                       <div

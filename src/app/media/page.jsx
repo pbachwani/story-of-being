@@ -74,9 +74,14 @@ const MediaPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative group overflow-hidden block aspect-video bg-black"
-                      initial={{ opacity: 0, y: 40 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.6,
+                        delay: i * 0.04, // 👈 stagger delay
+                        ease: "easeOut",
+                      }}
                     >
                       {/* THUMBNAIL */}
                       <motion.img
@@ -129,9 +134,14 @@ const MediaPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="relative group overflow-hidden block aspect-video bg-black"
-                      initial={{ opacity: 0, y: 40 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.6,
+                        delay: i * 0.04, // 👈 stagger delay
+                        ease: "easeOut",
+                      }}
                     >
                       <motion.img
                         src={thumbnail}
@@ -175,6 +185,14 @@ const MediaPage = () => {
 
                       return (
                         <motion.a
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.6,
+                            delay: i * 0.04, // 👈 stagger delay
+                            ease: "easeOut",
+                          }}
                           key={i}
                           href={`https://www.youtube.com/shorts/${video.youtubeId}`}
                           target="_blank"
@@ -220,11 +238,12 @@ const MediaPage = () => {
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{
-                    delay: i * 0.04,
-                    duration: 0.5,
+                    duration: 0.6,
+                    delay: i * 0.04, // 👈 stagger delay
                     ease: "easeOut",
                   }}
                   className="group relative py-5"

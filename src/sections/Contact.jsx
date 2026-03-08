@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen md:min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black"
+      className="relative w-full min-h-screen h-full md:min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black"
     >
       <Toaster />
 

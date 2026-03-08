@@ -91,7 +91,7 @@ const Awards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.6,
-                delay: i * 0.08, // 👈 stagger delay
+                delay: i * 0.01, // 👈 stagger delay
                 ease: "easeOut",
               }}
               key={i}

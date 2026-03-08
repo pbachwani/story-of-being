@@ -1,7 +1,9 @@
+"use client";
 import { ChevronRight } from "lucide-react";
-import Image from "next/image";
+
 import Link from "next/link";
 import React from "react";
+import { motion } from "motion/react";
 
 const Featured = () => {
   return (
@@ -9,8 +11,16 @@ const Featured = () => {
       <div className="flex flex-col gap-10 max-w-[1440px] mx-auto">
         <h1 className="font-abril text-2xl md:text-4xl">Featured Films</h1>
         {/* card 1 */}
-
-        <div className="w-full max-w-7xl h-full flex flex-col justify-start mx-auto mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.08, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="w-full max-w-7xl h-full flex flex-col justify-start mx-auto mt-4"
+        >
           <img
             src={"/featured/1.png"}
             alt="first"
@@ -35,9 +45,18 @@ const Featured = () => {
               united resolve.
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* row 2 */}
-        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10 mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.08, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10 mt-10"
+        >
           <div className="md:w-1/2 w-full flex flex-col">
             <img
               src="/featured/2.png"
@@ -85,10 +104,19 @@ const Featured = () => {
               tempore adipisci dignissimos aspernatur amet cumque ex ad.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* row 3 */}
-        <div className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            delay: 0.08, // 👈 stagger delay
+            ease: "easeOut",
+          }}
+          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10"
+        >
           <div className="md:w-1/2 w-full flex flex-col">
             <div className="aspect-video">
               <img
@@ -126,13 +154,16 @@ const Featured = () => {
               India's vanishing handicraft legacy.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* all films button */}
         <div className="flex justify-center items-center">
-          <button className="border border-gray-500 px-4 py-2 hover:rounded-lg hover:bg-[#2A5311] hover:text-white duration-200 ease-out transition-all">
+          <Link
+            href={"/films"}
+            className="border border-gray-500 px-4 py-2 hover:rounded-lg hover:bg-[#2A5311] hover:text-white duration-200 ease-out transition-all"
+          >
             Watch all films
-          </button>
+          </Link>
         </div>
       </div>
     </section>
