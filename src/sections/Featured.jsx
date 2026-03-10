@@ -4,6 +4,8 @@ import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { motion } from "motion/react";
+import FeaturedProject from "@/components/FeaturedProject";
+import { featured } from "@/app/constants/data";
 
 const Featured = () => {
   return (
@@ -50,6 +52,7 @@ const Featured = () => {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{
             duration: 0.6,
             delay: 0.08, // 👈 stagger delay
@@ -57,7 +60,7 @@ const Featured = () => {
           }}
           className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10 mt-10"
         >
-          <div className="md:w-1/2 w-full flex flex-col">
+          {/* <div className="md:w-1/2 w-full flex flex-col">
             <img
               src="/featured/2.png"
               alt="first"
@@ -80,8 +83,10 @@ const Featured = () => {
               textiles and our rich craft sector. The protagonists of this film
               are a group of people who have facilitated this change.
             </p>
-          </div>
-          <div className="md:w-1/2 w-full flex flex-col">
+          </div> */}
+          <FeaturedProject featured={featured[1]} />
+          <FeaturedProject featured={featured[2]} />
+          {/* <div className="md:w-1/2 w-full flex flex-col">
             <div className="aspect-video">
               <img
                 src="/featured/3.png"
@@ -90,8 +95,8 @@ const Featured = () => {
               />
             </div>
 
-            <div className="w-full flex justify-between items-end">
-              <h2 className="mt-8 font-extrabold text-2xl">
+            <div className="w-full flex justify-between items-start">
+              <h2 className="font-extrabold text-2xl">
                 Rajkumari Ratnavati School
               </h2>
               <a href="https://www.youtube.com/watch?v=PD2XPKFUJnA" target="_">
@@ -103,7 +108,7 @@ const Featured = () => {
               voluptas soluta, aperiam architecto sint esse autem voluptates
               tempore adipisci dignissimos aspernatur amet cumque ex ad.
             </p>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* row 3 */}
@@ -117,7 +122,7 @@ const Featured = () => {
           }}
           className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10"
         >
-          <div className="md:w-1/2 w-full flex flex-col">
+          {/* <div className="md:w-1/2 w-full flex flex-col">
             <div className="aspect-video">
               <img
                 src="/featured/4.png"
@@ -135,8 +140,10 @@ const Featured = () => {
               A retrieval of colour to a world drained of its natural resources,
               abundance and animation through years of piling marble dust.
             </p>
-          </div>
-          <div className="md:w-1/2 w-full flex flex-col">
+          </div> */}
+          <FeaturedProject featured={featured[3]} />
+          <FeaturedProject featured={featured[4]} />
+          {/* <div className="md:w-1/2 w-full flex flex-col">
             <img
               src="/featured/5.png"
               alt="first"
@@ -153,7 +160,7 @@ const Featured = () => {
               Chidambara Rao sparks an explosive bond, a defiant stand against
               India's vanishing handicraft legacy.
             </p>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* all films button */}

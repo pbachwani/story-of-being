@@ -14,7 +14,7 @@ import { wrap } from "@motionone/utils";
 
 export default function ImageMarqueeScroll({
   images = [],
-  baseVelocity = 20,
+  baseVelocity = 10,
   height = 120,
 }) {
   const baseX = useMotionValue(0);
@@ -52,7 +52,15 @@ export default function ImageMarqueeScroll({
     <div className="overflow-hidden w-full">
       <motion.div className="flex gap-4" style={{ x }}>
         {[...images, ...images].map((src, i) => (
-          <img
+          <motion.img
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: i * 0.04, // 👈 stagger delay
+              ease: "easeOut",
+            }}
             key={i}
             src={src}
             alt=""
