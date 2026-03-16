@@ -53,14 +53,14 @@ const Contact = () => {
             <div>
               {[
                 {
+                  name: "Story of Being - Instagram",
+                  sub: "@story.of.being",
+                  link: "https://www.instagram.com/story.of.being",
+                },
+                {
                   name: "Instagram",
                   sub: "@keya.vaswani",
                   link: "https://www.instagram.com/keya.vaswani",
-                },
-                {
-                  name: "Story of Being",
-                  sub: "@story.of.being",
-                  link: "https://www.instagram.com/story.of.being",
                 },
                 {
                   name: "LinkedIn",
@@ -93,7 +93,7 @@ const Contact = () => {
             {/* Book a Session */}
             <div className="max-md:hidden flex flex-col backdrop-blur-md bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
               <h2 className="font-abril text-2xl md:text-3xl">
-                Book a Session
+                Book a Telepathy Session
               </h2>
 
               <div className="text-white/70 my-10 space-y-4 text-sm md:text-base leading-relaxed">
@@ -246,7 +246,7 @@ const Contact = () => {
             {/* book a session for mobile */}
             <div className="md:hidden flex flex-col backdrop-blur-md bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
               <h2 className="font-abril text-2xl md:text-3xl">
-                Book a Session
+                Book a Telepathy Session
               </h2>
 
               <div className="text-white/70 my-10 space-y-4 text-sm md:text-base leading-relaxed">

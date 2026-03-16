@@ -21,7 +21,7 @@ export default function FadingImageHero({
   }, [images.length, interval]);
 
   return (
-    <div className={`relative w-full h-full overflow-hidden`}>
+    <div className={`relative w-full h-full overflow-hidden ${className}`}>
       {/* Base image (always visible) */}
       <img
         src={images[index]}

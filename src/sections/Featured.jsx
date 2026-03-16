@@ -21,7 +21,7 @@ const Featured = () => {
             delay: 0.08, // 👈 stagger delay
             ease: "easeOut",
           }}
-          className="w-full max-w-7xl h-full flex flex-col justify-start mx-auto mt-4"
+          className="w-full max-w-7xl h-full flex flex-col justify-start mx-auto"
         >
           <a href={featured[0].link} target="_">
             <img
@@ -33,21 +33,24 @@ const Featured = () => {
           <div
             // href={"https://www.youtube.com/watch?v=8J59WBTqX6U"}
             // target="_"
-            className="flex flex-col md:flex-row w-full md:gap-10 mt-4"
+            className="flex flex-row w-full md:gap-10 mt-4"
           >
-            <div className="w-full md:w-1/2 flex justify-between items-end">
+            <div className="w-full md:w-1/2 flex flex-col justify-between items-start">
               <h2 className="md:text-start font-extrabold text-lg md:text-2xl">
                 To Turn a Tide
               </h2>
-              <a href={featured[0].link} target="_">
+              <p className=" font-montserrat leading-tight mt-2 text-sm">
+                To Turn a Tide tracks defiant farmers and grassroots innovators
+                battling back with clever water hacks, unbreakable grit, and
+                united resolve.
+              </p>
+            </div>
+
+            <div className="md:w-full flex justify-end items-start">
+              <a href={featured[0].link} target="_" className="">
                 <img src="/play-48.png" alt="" className="w-8 h-8" />
               </a>
             </div>
-            <p className="md:w-1/2 font-montserrat leading-tight mt-2 text-sm">
-              To Turn a Tide tracks defiant farmers and grassroots innovators
-              battling back with clever water hacks, unbreakable grit, and
-              united resolve.
-            </p>
           </div>
         </motion.div>
         {/* row 2 */}

@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { motion } from "motion/react";
 import Contact from "@/sections/Contact";
+import FadingImageHero from "@/components/FadingImageHero";
 
 const telepathySections = [
   {
@@ -26,7 +27,7 @@ const telepathySections = [
 
 const testimonials = [
   {
-    name: "Arun, Chikki",
+    name: "Arun",
     images: ["/testimonials/arun1.jpeg", "/testimonials/arun2.jpg"],
     paragraphs: [
       ` “I had a pet parrot, Chikki, more than a decade ago. I had tohand him over to a caretaker due to personal reasons. However, in both my mind and my wife&apos;s we really felt guilty and we had no closure. We weren&apos;t sure how he was. He was happy when he was with us, and the lack of information about him kept troubling us through the years. I recently came across Keyas instagram page. I was very sceptical about the telepathy with animals, but I had to try. Keya was empathetic and patiently explained techniques used. With some experience with meditation, energy work etc., I was able to understand most of it.`,
@@ -63,53 +64,69 @@ const Telepathy = () => {
   return (
     <main className="w-full min-h-screen bg-background">
       {/* top */}
-      <div className="h-[70vh] z-30 flex flex-col justify-center items-center relative text-white">
-        <img
-          // initial={{ height: 0 }}
-          // animate={{ height: "70vh" }}
-          // transition={{ delay: 0.2, duration: 0.3, ease: "easeInOut" }}
-          src="/telepathy/1.jpg"
-          alt="cover image"
-          className="absolute inset-0 object-cover w-full h-full -z-10"
+      <div className="flex items-center justify-center relative h-[70vh]">
+        <FadingImageHero
+          images={[
+            "/telepathy/1.jpg",
+            "/telepathy/2.jpg",
+            "/telepathy/3.jpg",
+            "/telepathy/4.jpg",
+            "/telepathy/5.jpg",
+            "/telepathy/6.jpg",
+            "/telepathy/7.jpg",
+            "/telepathy/8.jpg",
+            "/telepathy/9.jpg",
+            "/telepathy/10.jpg",
+            "/telepathy/11.jpg",
+            "/telepathy/12.jpg",
+            "/telepathy/13.jpg",
+          ]}
+          interval={3000}
+          className="brightness-60"
         />
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.08, // 👈 stagger delay
-            ease: "easeOut",
-          }}
-          className="font-boska font-black text-3xl mt-10 text-center"
-        >
-          Telepathic Communication
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.1, // 👈 stagger delay
-            ease: "easeOut",
-          }}
-          className="font-boska font-bold text-xl"
-        >
-          Connecting Hearts Beyond Words
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.6,
-            delay: 0.12, // 👈 stagger delay
-            ease: "easeOut",
-          }}
-          className="font-montserrat text-white font-semibold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full mt-10"
-        >
-          Welcome to the Telepathic Communication experience—a unique path to
-          deepen your connection with your beloved pets, plant companions, and
-          the natural world around you.
-        </motion.p>
+        <div className="absolute top-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-2 z-10 text-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.08, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="font-abril text-3xl mt-10 text-center"
+          >
+            Telepathic Communication
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="font-montserrat text-lg"
+          >
+            Connecting Hearts Beyond Words
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.12, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="font-montserrat text-white font-base md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full mt-4"
+          >
+            Welcome to the Telepathic Communication experience - a unique path
+            to deepen your connection with your beloved pets, plant companions,
+            and the natural world around you.
+          </motion.p>
+        </div>
       </div>
 
       <section className="w-full px-4 md:px-16 py-24 bg-background">
@@ -118,6 +135,7 @@ const Telepathy = () => {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.6,
                 delay: i * 0.1, // 👈 stagger delay
@@ -127,12 +145,10 @@ const Telepathy = () => {
               className="flex flex-col justify-start px-4 py-4 gap-4"
             >
               {/* Heading */}
-              <h3 className="text-3xl md:text-3xl font-abril font-bold ">
-                {section.title}
-              </h3>
+              <h3 className="text-xl font-abril font-bold">{section.title}</h3>
 
               {/* Content */}
-              <p className="leading-relaxed text-base md:text-lg h-full">
+              <p className="leading-relaxed text-base md:text-base h-full">
                 {section.content}
               </p>
             </motion.div>
@@ -175,6 +191,7 @@ const Telepathy = () => {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.6,
                   delay: i * 0.08, // 👈 stagger delay
@@ -198,7 +215,7 @@ const Telepathy = () => {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-2xl font-boska font-bold">{t.name}</h3>
+                <h3 className="text-xl font-montserrat font-bold">{t.name}</h3>
 
                 {/* Content */}
                 <div className="space-y-4 font-montserrat leading-relaxed text-sm md:text-base">
