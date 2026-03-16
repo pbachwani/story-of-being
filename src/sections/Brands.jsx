@@ -59,7 +59,7 @@ const Brands = () => {
                 ease: "linear",
                 repeat: Infinity,
               }}
-              className="flex flex-none gap-16 pr-16"
+              className="flex flex-none md:gap-8 md:pr-8 gap-2 pr-2"
             >
               {Array.from({ length: 2 }).map((_, i) => (
                 <React.Fragment key={i}>
@@ -68,7 +68,7 @@ const Brands = () => {
                       initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.6,
+                        duration: 0.4,
                         delay: i * 0.08, // 👈 stagger delay
                         ease: "easeOut",
                       }}
