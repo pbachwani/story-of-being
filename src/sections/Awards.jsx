@@ -81,7 +81,7 @@ const Awards = () => {
   const others = awardsNew.slice(3);
 
   return (
-    <section className="w-full md:px-16 px-2 pt-16 pb-8 bg-background">
+    <section className="w-full md:px-16 px-2 md:pt-16 md:pb-8 bg-background">
       <div className="max-w-[1440px] mx-auto flex flex-col md:gap-10">
         {/* 🔥 Top Featured Logos */}
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-16 items-center justify-items-center">

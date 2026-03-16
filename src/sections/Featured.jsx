@@ -9,7 +9,7 @@ import { featured } from "@/app/constants/data";
 
 const Featured = () => {
   return (
-    <section className="w-full h-full min-h-screen pt-20 px-4 md:px-16 mx-auto bg-background">
+    <section className="w-full h-full min-h-screen pt-16 px-4 md:px-16 mx-auto bg-background">
       <div className="flex flex-col gap-10 max-w-[1440px] mx-auto">
         <h1 className="font-abril text-2xl md:text-4xl">Featured Films</h1>
         {/* card 1 */}
@@ -23,22 +23,24 @@ const Featured = () => {
           }}
           className="w-full max-w-7xl h-full flex flex-col justify-start mx-auto mt-4"
         >
-          <img
-            src={"/featured/1.png"}
-            alt="first"
-            className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
-          />
+          <a href={featured[0].link} target="_">
+            <img
+              src={"/featured/1.png"}
+              alt="first"
+              className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
+            />
+          </a>
           <div
             // href={"https://www.youtube.com/watch?v=8J59WBTqX6U"}
             // target="_"
             className="flex flex-col md:flex-row w-full md:gap-10 mt-4"
           >
             <div className="w-full md:w-1/2 flex justify-between items-end">
-              <h2 className="md:text-start font-extrabold text-xl">
+              <h2 className="md:text-start font-extrabold text-lg md:text-2xl">
                 To Turn a Tide
               </h2>
-              <a href="https://www.youtube.com/watch?v=8J59WBTqX6U" target="_">
-                <ChevronRight size={32} />
+              <a href={featured[0].link} target="_">
+                <img src="/play-48.png" alt="" className="w-8 h-8" />
               </a>
             </div>
             <p className="md:w-1/2 font-montserrat leading-tight mt-2 text-sm">

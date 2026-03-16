@@ -415,29 +415,34 @@ export const featured = [
     description:
       "To Turn a Tide tracks defiant farmers and grassroots innovators battling back with clever water hacks, unbreakable grit, and united resolve.",
     image: "/featured/1.png",
+    link: "https://www.youtube.com/watch?v=8J59WBTqX6U",
   },
   {
     title: "Weaves of Maheshwar",
     description:
       "Weaves of Maheshwar is a story about craft revival. The documentary revolves around various journeys about people who have made this change possible. In an era where the machines are taking over the world India is the only country which still produces 90% of handloom. Weaves of Maheshwar portrays this strength of Indian textiles and our rich craft sector. The protagonists of this film are a group of people who have facilitated this change.",
     image: "/featured/2.png",
+    link: "https://youtu.be/f_t1mHjxaNw",
   },
   {
     title: "Rajkumari Ratnavati School",
     description:
       "In the heart of the Thar Desert, the Rajkumari Ratnavati Girls School stands as a testament to intelligent design—where architecture, climate, and culture converge to shape empowered futures.",
     image: "/featured/3.png",
+    link: "https://www.youtube.com/watch?v=PD2XPKFUJnA",
   },
   {
     title: "The Dawn",
     description:
       "A retrieval of colour to a world drained of its natural resources, abundance and animation through years of piling marble dust.",
     image: "/featured/4.png",
+    link: "https://youtu.be/fPFUAYUP7hw",
   },
   {
     title: "Tholubomalatta",
     description:
       "Paul's fateful meeting with Tholubommalata master artisan Mr. Chidambara Rao sparks an explosive bond, a defiant stand against India's vanishing handicraft legacy.",
     image: "/featured/5.png",
+    link: "https://youtu.be/fsDX54jB--4",
   },
 ];
