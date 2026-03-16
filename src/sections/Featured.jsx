@@ -35,7 +35,7 @@ const Featured = () => {
             // target="_"
             className="flex flex-row w-full md:gap-10 mt-4"
           >
-            <div className="w-full md:w-1/2 flex flex-col justify-between items-start">
+            <div className="w-full flex flex-col justify-between items-start">
               <h2 className="md:text-start font-extrabold text-lg md:text-2xl">
                 To Turn a Tide
               </h2>
