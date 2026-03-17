@@ -84,7 +84,7 @@ const Awards = () => {
     <section className="w-full md:px-16 px-2 md:pt-16 md:pb-8 bg-background">
       <div className="max-w-[1440px] mx-auto flex flex-col md:gap-10">
         {/* 🔥 Top Featured Logos */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 items-center justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 items-start justify-items-center">
           {featured.map((src, i) => (
             <motion.img
               initial={{ opacity: 0, y: 10 }}
@@ -104,7 +104,7 @@ const Awards = () => {
 
         <div className="flex flex-col lg:gap-10">
           {/* Row 2 */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 justify-items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 lg:gap-x-10 justify-items-center lg:mx-auto">
             {others.slice(0, 4).map((src, i) => (
               <motion.img
                 key={i}

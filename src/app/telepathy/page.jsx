@@ -13,15 +13,15 @@ import FadingImageHero from "@/components/FadingImageHero";
 const telepathySections = [
   {
     title: "Who I Am",
-    content: `With over 4 years of dedicated practice as a telepathic communicator, I specialize in bridging the unseen language between humans and their animal and plant companions. Combining intuition, empathy, and an attuned sensitivity to subtle energies, I offer a rare opportunity for meaningful dialogue that transcends ordinary communication.`,
+    content: `With over 4 years of dedicated practice as a telepathic communicator. My work is focused on helping humans better understand their companions beyond verbal language, creating more ease and harmony in the relationship. I approach each session with neutrality, sensitivity, and respect—ensuring that what is received is observed and translated with clarity and care.`,
   },
   {
     title: "How It Works",
-    content: `Telepathic communication is a natural, non-verbal form of connection — something we all experience daily. Through focused intention and intuitive perception, I receive impressions, emotions, and messages from your pets, plants, or even your inner self. This process offers insight into needs, feelings, and energetic well-being.`,
+    content: `Telepathic communication can be understood as a focused form of non-verbal perception and attunement. The brain is constantly processing subtle cues—emotions, behavioral patterns, and sensory signals—most of which remain below conscious awareness. When the mind is calm and undistracted, this sensitivity becomes more accessible and reliable. Research in Neuroscience, including Mirror Neurons, shows that humans are naturally wired to register and reflect the internal states of other beings. In a session, this ability is intentionally directed toward your companion, allowing subtle impressions—such as images, emotions, or physical sensations—to be received and translated into clear, practical insights.`,
   },
   {
     title: "Why Connect This Way?",
-    content: `We often wonder what our companions are feeling — or how we can care more deeply. Telepathic sessions provide clarity, healing, and guidance by tuning into these subtle dialogues, strengthening bonds and nurturing soulful understanding.`,
+    content: `For pet and plant parents, this bond is already present. Living closely with another being creates an intuitive understanding—you may already sense when they are happy, stressed, or unwell. Telepathic communication brings clarity to this connection, helping you understand your companion more deeply and respond with greater ease and care. Through this process, you can gain insights into your companion’s emotional state, behavior patterns, preferences around food, and overall well-being. It can also support situations such as understanding sudden changes, addressing concerns, reconnecting in times of distress, or seeking guidance if a pet is lost. Telepathic sessions provide clear answers, healing, and guidance`,
   },
 ];
 
@@ -76,7 +76,7 @@ const Telepathy = () => {
             "/telepathy/7.jpg",
             "/telepathy/8.jpg",
             "/telepathy/9.jpg",
-            "/telepathy/10.jpg",
+            // "/telepathy/10.jpg",
             "/telepathy/11.jpg",
             "/telepathy/12.jpg",
             "/telepathy/13.jpg",
@@ -148,7 +148,7 @@ const Telepathy = () => {
               <h3 className="text-xl font-abril font-bold">{section.title}</h3>
 
               {/* Content */}
-              <p className="leading-relaxed text-base md:text-base h-full">
+              <p className="leading-relaxed text-xs md:text-sm h-full">
                 {section.content}
               </p>
             </motion.div>
