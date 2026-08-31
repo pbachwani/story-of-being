@@ -168,7 +168,7 @@ const Featured = () => {
         <div className="flex justify-center items-center mt-4">
           <Link
             href={"/films"}
-            className="border border-gray-500 px-4 py-2 hover:rounded-lg hover:bg-[#2A5311] hover:text-white duration-200 ease-out transition-all"
+            className="border border-gray-500 px-4 py-2 rounded-3xl hover:bg-[#2A5311] hover:text-white duration-200 ease-out transition-all max-md:text-sm"
           >
             Watch all films
           </Link>

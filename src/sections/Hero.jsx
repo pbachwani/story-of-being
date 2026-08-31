@@ -12,10 +12,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const contentRef = useRef(null);
+  const bottomRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(contentRef.current, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "+=500",
+          scrub: true,
+        },
+      });
+      gsap.to(bottomRef.current, {
         opacity: 0,
         scrollTrigger: {
           trigger: document.body,
@@ -55,6 +65,12 @@ const Hero = () => {
             <p className="text-center md:px-4 px-16 max-md:text-sm ">
               Explore cinematic projects, storytelling, and films.
             </p>
+            <AnimatedLink
+              href="/films"
+              className="md:hidden text-sm border border-white px-2.5 py-0.5 rounded-3xl"
+            >
+              Know more
+            </AnimatedLink>
           </div>
           {/* center image */}
           <div className="w-full flex flex-col justify-center items-center gap-4 max-md:p-10">
@@ -78,10 +94,19 @@ const Hero = () => {
               Discover sessions and insights on connecting deeply with animals &
               Nature.
             </p>
+            <AnimatedLink
+              href="/telepathy"
+              className="md:hidden text-sm border border-white px-2.5 py-0.5 rounded-3xl"
+            >
+              Telepathy
+            </AnimatedLink>
           </div>
         </div>
       </div>
-      <div className="absolute md:bottom-6 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white">
+      <div
+        ref={bottomRef}
+        className="absolute md:bottom-6 bottom-10 left-1/2 -translate-x-1/2 flex justify-center items-center w-full max-w-6xl p-4 text-white"
+      >
         <div className="w-fit px-4">
           <p className="text-nowrap">Two worlds</p>
         </div>
