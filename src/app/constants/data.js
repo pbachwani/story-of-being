@@ -61,6 +61,7 @@ export const projects = [
     category: "Environmental",
     link: "https://www.youtube.com/watch?v=s1eFNaZhLCA&t=105s",
     logline: `In warm conversation with Manjiri Latey, the film opens a vivid space of telepathic connection—felt deeply, seen clearly, and understood with quiet wonder.`,
+    cover: "/project-covers/A peek into Telepathic world.jpg",
   },
   {
     name: "Take a Look",

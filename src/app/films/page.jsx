@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { projects } from "../constants/data";
 import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
+import FadingImageHero from "@/components/FadingImageHero";
 
 const Films = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -22,13 +23,46 @@ const Films = () => {
   }, [activeFilter]);
 
   return (
-    <main className="h-full min-h-screen w-screen py-24 px-2 md:px-12 overflow-x-clip mx-auto bg-background">
-      <div className="max-w-[1440px] mx-auto">
+    <main className="h-full min-h-screen w-screen  overflow-x-clip mx-auto bg-background">
+      <div className="flex items-center justify-center relative h-[70vh]">
+        <div className="absolute top-1/2 -translate-y-1/2 flex flex-col justify-center items-center gap-4 z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.08, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="text-white font-boska font-extrabold text-4xl md:text-6xl"
+          >
+            Films
+          </motion.h2>
+        </div>
+
+        <FadingImageHero
+          images={[
+            "/aboutpage/1.jpg",
+            "/aboutpage/2.jpg",
+            "/aboutpage/3.jpg",
+            "/aboutpage/4.jpg",
+            "/aboutpage/5.jpg",
+            "/aboutpage/6.jpg",
+            "/aboutpage/7.jpg",
+            "/aboutpage/8.jpg",
+            "/aboutpage/9.jpg",
+            "/aboutpage/10.jpg",
+          ]}
+          interval={3000}
+        />
+      </div>
+      <div className="max-w-[1440px] py-8 md:py-12 px-4 md:px-12 mx-auto">
         <div className="w-full flex flex-col">
           {/* HEADER */}
           <div className="w-full flex flex-col lg:flex-row md:justify-between md:items-end gap-6">
-            <h1 className="w-full flex-1 text-4xl lg:text-7xl font-abril">
-              Films
+            <h1 className="w-full flex-1 text-xl lg:text-2xl font-abril text-nowrap">
+              Category filters
             </h1>
 
             {/* FILTERS */}

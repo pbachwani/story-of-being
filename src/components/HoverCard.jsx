@@ -178,8 +178,8 @@ function Gallery({ items, setIndex, index }) {
           className={`rounded-xl relative
             ${
               index === i
-                ? "w-[550px] max-lg:w-full"
-                : "w-[150px] max-lg:w-full"
+                ? "w-[650px] max-lg:w-full"
+                : "w-[250px] max-lg:w-full"
             }
             h-[400px] max-lg:h-[150px]
             shrink-0 transition-[width] ease-in-linear duration-500 origin-center`}

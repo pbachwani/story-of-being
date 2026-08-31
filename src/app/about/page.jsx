@@ -25,23 +25,8 @@ const about = () => {
             }}
             className="text-white font-boska font-extrabold text-4xl md:text-6xl"
           >
-            Story of Being
+            About
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.1, // 👈 stagger delay
-              ease: "easeOut",
-            }}
-            className="font-montserrat text-white font-bold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full"
-          >
-            Two worlds—one journey: cinematic storytelling as an accomplished
-            film director, and deep connection with nature as an animal and
-            Nature whisperer, all part of the Story of Being.
-          </motion.p>
         </div>
 
         <FadingImageHero
@@ -64,7 +49,7 @@ const about = () => {
       {/* portfolio image and text */}
       <div
         id="intro section"
-        className="max-w-[1440px] mt-24 mx-auto px-2 md:px-24 flex flex-col w-full gap-2"
+        className="max-w-[1440px] mt-24 mx-auto px-4 md:px-24 flex flex-col w-full gap-2"
       >
         <h2 className="font-abril text-2xl">The Founder</h2>
         <div className="flex flex-col md:flex-row w-full justify-center items-center md:items-start gap-4 md:gap-20">
@@ -152,3 +137,34 @@ const about = () => {
 };
 
 export default about;
+
+{
+  /* <motion.h2
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.08, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="text-white font-boska font-extrabold text-4xl md:text-6xl"
+          >
+            Story of Being
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1, // 👈 stagger delay
+              ease: "easeOut",
+            }}
+            className="font-montserrat text-white font-bold md:w-4/5 px-8 max-w-2xl text-sm text-center backdrop-blur-[1.5px] rounded-full"
+          >
+            Two worlds—one journey: cinematic storytelling as an accomplished
+            film director, and deep connection with nature as an animal and
+            Nature whisperer, all part of the Story of Being.
+          </motion.p> */
+}

@@ -1,6 +1,12 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Abril_Fatface, Montserrat, Raleway } from "next/font/google";
+import {
+  Abril_Fatface,
+  Montserrat,
+  Raleway,
+  Urbanist,
+  Sarabun,
+} from "next/font/google";
 
 import { ReactLenis } from "lenis/react";
 import { LenisProvider } from "@/components/LenisProvider";
@@ -16,6 +22,17 @@ const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-raleway",
+});
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-urbanist",
+});
+const sarabun = Sarabun({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-sarabun",
 });
 
 const montserrat = Montserrat({
@@ -55,7 +72,7 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body
-        className={`${montserrat.variable} ${raleway.variable} ${abril_fatface.variable} antialiased`}
+        className={`${montserrat.variable} ${raleway.variable} ${abril_fatface.variable} ${urbanist.variable} ${sarabun.variable} antialiased`}
       >
         {/* <ReactLenis root /> */}
         <LenisProvider>

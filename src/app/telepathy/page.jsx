@@ -129,7 +129,7 @@ const Telepathy = () => {
         </div>
       </div>
 
-      <section className="w-full px-4 md:px-16 py-24 bg-background">
+      <section className="w-full px-4 md:px-16 py-8 md:py-12 bg-background">
         <div className="grid lg:grid-cols-3 max-w-7xl mx-auto">
           {telepathySections.map((section, i) => (
             <motion.div
@@ -198,19 +198,19 @@ const Telepathy = () => {
                   ease: "easeOut",
                 }}
                 key={i}
-                className="flex flex-col gap-8 p-8 md:p-10 bg-[#98c867]/20 rounded-2xl shadow-sm"
+                className="flex flex-col gap-4 p-4 md:p-10 bg-[#98c867]/20 rounded-2xl w-fit"
               >
                 {/* Images */}
-                <div className="flex gap-2">
+                <div className="flex gap-2 w-full justify-center items-start max-w-fit md:min-h-40">
                   <img
                     src={t.images[0]}
                     alt={t.name}
-                    className="w-2/3 h-64 object-cover rounded-md"
+                    className="w-fit h-20 lg:h-32 object-contain rounded-md shrink hover:h-40 transition-all duration-300 ease-out"
                   />
                   <img
                     src={t.images[1]}
                     alt={t.name}
-                    className="w-1/3 h-64 object-cover rounded-md"
+                    className="w-fit h-20 lg:h-32 object-contain rounded-md shrink hover:h-40 transition-all duration-300 ease-out"
                   />
                 </div>
 

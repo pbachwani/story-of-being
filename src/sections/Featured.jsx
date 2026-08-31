@@ -10,7 +10,7 @@ import { featured } from "@/app/constants/data";
 const Featured = () => {
   return (
     <section className="w-full h-full min-h-screen pt-16 px-4 md:px-16 mx-auto bg-background">
-      <div className="flex flex-col gap-10 max-w-[1440px] mx-auto">
+      <div className="flex flex-col gap-8 max-w-[1440px] mx-auto">
         <h1 className="font-abril text-2xl md:text-4xl">Featured Films</h1>
         {/* card 1 */}
         <motion.div
@@ -30,11 +30,7 @@ const Featured = () => {
               className="w-full h-full object-cover scale-[101%] hover:scale-100 transition-all duration-500 ease-out rounded-sm hover:rounded-xl"
             />
           </a>
-          <div
-            // href={"https://www.youtube.com/watch?v=8J59WBTqX6U"}
-            // target="_"
-            className="flex flex-row w-full md:gap-10 mt-4"
-          >
+          <div className="flex flex-row w-full md:gap-10 mt-4">
             <div className="w-full flex flex-col justify-between items-start">
               <h2 className="md:text-start font-extrabold text-lg md:text-2xl">
                 To Turn a Tide
@@ -63,7 +59,7 @@ const Featured = () => {
             delay: 0.08, // 👈 stagger delay
             ease: "easeOut",
           }}
-          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10"
+          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-8"
         >
           {/* <div className="md:w-1/2 w-full flex flex-col">
             <img
@@ -125,7 +121,7 @@ const Featured = () => {
             delay: 0.08, // 👈 stagger delay
             ease: "easeOut",
           }}
-          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-10"
+          className="w-full max-w-7xl h-full flex flex-col md:flex-row mx-auto gap-8"
         >
           {/* <div className="md:w-1/2 w-full flex flex-col">
             <div className="aspect-video">
@@ -169,7 +165,7 @@ const Featured = () => {
         </motion.div>
 
         {/* all films button */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-4">
           <Link
             href={"/films"}
             className="border border-gray-500 px-4 py-2 hover:rounded-lg hover:bg-[#2A5311] hover:text-white duration-200 ease-out transition-all"

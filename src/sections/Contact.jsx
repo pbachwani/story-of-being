@@ -36,36 +36,42 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen h-full md:min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black"
+      className="relative w-full min-h-screen h-full md:min-h-dvh px-4 md:px-16 bg-gradient-to-b from-transparent to-black flex justify-center items-center"
     >
       <Toaster />
 
-      <div className="md:py-20 py-10 text-white max-w-[1440px] mx-auto flex flex-col md:gap-16 gap-8">
+      <div className="md:py-20 py-10 text-white max-w-[1440px] mx-auto flex flex-col gap-4">
         {/* HEADER */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col">
           <h1 className="font-abril text-2xl md:text-4xl">Contact</h1>
         </div>
 
         {/* CONTENT */}
-        <div className="grid lg:grid-cols-2 gap-10 items-end ">
+        <div className="grid lg:grid-cols-2 md:gap-10 items-end md:mt-8">
           {/* LEFT LINKS */}
           <div className="text-white/80 flex flex-col gap-10">
             <div>
               {[
                 {
-                  name: "Story of Being - Instagram",
+                  name: "Story of Being",
                   sub: "@story.of.being",
                   link: "https://www.instagram.com/story.of.being",
+                  image: "/Instagram 1.svg",
+                  alt: "Story of Being instagram",
                 },
                 {
-                  name: "Instagram",
+                  name: "Keya Vaswani",
                   sub: "@keya.vaswani",
                   link: "https://www.instagram.com/keya.vaswani",
+                  image: "/Instagram 1.svg",
+                  alt: "Story of Being instagram",
                 },
                 {
-                  name: "LinkedIn",
+                  name: "Keya Vaswani",
                   sub: "View profile",
                   link: "https://www.linkedin.com/in/keya-vaswani-9b86a938",
+                  image: "/Linkedin 1.svg",
+                  alt: "Story of Being instagram",
                 },
               ].map((item, i) => (
                 <a
@@ -76,12 +82,16 @@ const Contact = () => {
                   className="relative group flex items-center justify-between py-3"
                 >
                   {/* TEXT */}
-                  <span className="text-lg font-raleway">{item.name}</span>
 
                   <span className="text-sm opacity-60 group-hover:opacity-100 transition">
-                    {item.sub} →
+                    <img
+                      src={item.image}
+                      alt={item.alt}
+                      className="w-fit h-fit object-cover"
+                    />
                   </span>
 
+                  <span className="text-lg font-raleway">{item.name}</span>
                   {/* BASE LINE */}
                   <span className="absolute bottom-0 left-0 h-[1px] w-full bg-white/20 overflow-hidden">
                     <span className="block h-full w-0 bg-white transition-all duration-300 ease-out group-hover:w-full" />
@@ -184,7 +194,7 @@ const Contact = () => {
           </div>
 
           {/* Right */}
-          <div className="flex flex-col gap-4 max-md:mt-16">
+          <div className="flex flex-col gap-4 max-md:mt-8">
             {/* FORM */}
             <form
               onSubmit={handleSubmit}
@@ -234,7 +244,7 @@ const Contact = () => {
               <button
                 disabled={submitting}
                 type="submit"
-                className={`mt-4 bg-none text-white hover:text-black px-2 hover:px-6 py-3 rounded-full w-fit hover:bg-white/90 transition-all ${submitting ? "cursor-not-allowed opacity-70" : ""}`}
+                className={`mt-4 bg-none text-white hover:text-black px-2 hover:px-6 py-3 rounded-full w-fit hover:cursor-pointer hover:bg-white/90 transition-all ${submitting ? "cursor-not-allowed opacity-70" : ""}`}
               >
                 Send Message
                 <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">

@@ -47,10 +47,7 @@ const Hero = () => {
           {/* left col */}
           <div className="w-full flex flex-col justify-center items-center gap-2 h-fit hover:cursor-pointer">
             <h1 className="md:text-3xl text-xl font-bold hover:scale-110 transition-all duration-300 ease-out">
-              <AnimatedLink
-                href="/films"
-                className="max-md:underline underline-offset-5"
-              >
+              <AnimatedLink href="/films" className="">
                 Films
               </AnimatedLink>
             </h1>
@@ -73,10 +70,7 @@ const Hero = () => {
           {/* right col */}
           <div className="w-full flex flex-col justify-center items-center gap-2 h-fit hover:cursor-pointer">
             <h1 className="md:text-3xl text-xl font-bold hover:scale-110 transition-all duration-300 ease-out">
-              <AnimatedLink
-                href="/telepathy"
-                className="max-md:underline underline-offset-5"
-              >
+              <AnimatedLink href="/telepathy" className="">
                 Telepathy
               </AnimatedLink>
             </h1>

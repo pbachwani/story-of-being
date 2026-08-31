@@ -37,7 +37,7 @@ export default function FullscreenImage() {
         <img
           src="/aboutpage/8.jpg"
           alt=""
-          className="w-full h-full object-fill absolute"
+          className="w-full h-full object-cover absolute"
         />
         <Contact />
       </motion.div>

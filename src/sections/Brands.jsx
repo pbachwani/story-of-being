@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
-import line from "@/../public/brand-lines.png";
+import line from "@/../public/brand-lines1.png";
 import aavran from "@/../public/brands/Aavran Logo.png";
 import ad from "@/../public/brands/architectural-digest.png";
 import earthwise from "@/../public/brands/Earthwise logo.png";
@@ -43,15 +43,15 @@ const Brands = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <section className="w-screen pt-24 px-4 md:px-16 overflow-x-clip mx-auto bg-background">
+    <section className="w-screen pt-12 px-4 md:px-16 overflow-x-clip mx-auto bg-background">
       <div className="max-w-[1440px] mx-auto">
         <h2 className="font-abril text-2xl md:text-4xl">
           Brands & associations
         </h2>
-        <div className="py-10">
-          <Image src={line} alt="top line" className="mx-auto mt-2" />
+        <div className="py-8">
+          <Image src={line} alt="top line" className="mx-auto" />
 
-          <div className="py-0 flex overflow-hidden mt-6 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="py-0 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
             <motion.div
               animate={{ x: "-50%" }}
               transition={{
